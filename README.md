@@ -31,7 +31,7 @@ Novalnet payment plugin for WooCommerce simplifies your daily work by automating
 * Subscription management
 
 ## WooCommerce Demo Shop
-Find more about WooCommerce plugin on: https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_4.0-5.7_woocommerce_3.0.0-5.1.0_woo-subscription_2.0.0-3.0.13_novalnet_12.0.5.pdf <br>
+Find more about WooCommerce plugin on: https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_4.0-5.7.1_woocommerce_3.0.0-5.2.2_woo-subscription_2.0.0-3.0.13_novalnet_12.0.5.pdf <br>
 To test our demo shop, please visit: https://woocommerce.novalnet.de/ 
 
 ## Integrated Payment Methods
