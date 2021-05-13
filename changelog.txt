@@ -1,5 +1,13 @@
 *** Changelog ***
 
+= 12.0.6 - 2021.05.13 =
+* New 	- Subscription reactivation handled, when Subscription order is 'Cancelled'
+* Fix 	- Error logs from Przelewy24 payment
+* Fix 	- Adjusted the payment plugin for Cron execution error
+* Fix 	- Refund process for PayPal payment
+* Enhanced - Exact order numbers are fetched and updated for the subscription renewal orders
+* Enhanced - Instalment summary template for Instalment by Direct Debit SEPA and Instalment by Invoice
+
 = 12.0.5 - 2021.02.15 =
 * Fix   - HTML Tag in "Customer provided note" for WooCommerce 5.0.0 compatibility
 
