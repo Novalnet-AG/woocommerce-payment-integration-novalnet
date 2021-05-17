@@ -25,7 +25,7 @@ Novalnet payment plugin for WooCommerce simplifies your daily work by automating
 * One-click shopping supported for commonly used payment methods
 * Easy confirmation/cancellation of on-hold transactions for most of the payment methods
 * Refund option available for all payments (except Multibanco)
-* Transaction amount update option for Direct Debit SEPA, Invoice, Prepayment & Barzahlen
+* Transaction amount update option for Direct Debit SEPA, Invoice, Prepayment & Barzahlen/viacash
 * Responsive templates
 * Automatic order creation upon subscription renewal
 * Subscription management
@@ -63,7 +63,7 @@ Follow these steps to install the WooCommerce payment plugin by Novalnet:
 4. Enable & activate the preferred payment types in your shop admin panel
 
 ## Documentation
-Find more about WooCommerce plugin in: https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_4.0-5.7.1_woocommerce_3.0.0-5.2.2_woo-subscription_2.0.0-3.0.13_novalnet_12.0.5.pdf <br>
+Find more about WooCommerce plugin in: https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_4.0-5.7.2_woocommerce_3.0.0-5.3.0_woo-subscription_2.0.0-3.0.15_novalnet_12.0.6.pdf <br>
 
 ## License
 See our License Agreement at: https://www.novalnet.com/payment-plugins/free/license
