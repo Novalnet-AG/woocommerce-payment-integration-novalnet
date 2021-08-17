@@ -1,5 +1,11 @@
 *** Changelog ***
 
+= 12.0.7 - 2021.06.17 =
+* Fix      - Optimized payment enabling in the payment method page
+* Enhanced - Credit/Debit Cards payment method description
+* Enhanced - Optimized the payment plugin for Virtual and Downloadable products
+* Enhanced - For every recurring subscription orders the parent order number is used as reference transactions
+
 = 12.0.6 - 2021.05.13 =
 * New 	- Subscription reactivation handled, when Subscription order is 'Cancelled'
 * Fix 	- Error logs from Przelewy24 payment
