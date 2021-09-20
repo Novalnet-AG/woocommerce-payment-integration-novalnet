@@ -1,5 +1,8 @@
 *** Changelog ***
 
+= 12.0.8 - 2021.09.20 =
+* Fix      - Payment redirection is optimized for successful transactions when previous transactions failed for the same order
+
 = 12.0.7 - 2021.06.17 =
 * Fix      - Optimized payment enabling in the payment method page
 * Enhanced - Credit/Debit Cards payment method description
