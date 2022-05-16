@@ -1,5 +1,10 @@
 *** Changelog ***
 
+= 12.2.0 - 2022.05.16 =
+* New      - Implemented Apple Pay payment
+* Fix 	   - Shop admin receives the order confirmation email even after integrating with Germanized Plugin
+* Enhanced - Updated payment logo for Sofort payment
+
 = 12.1.0 - 2022.04.01 =
 * New 	   - Order creation process handled from the shop admin panel
 
