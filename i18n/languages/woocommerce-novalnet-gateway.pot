@@ -1,0 +1,1425 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Novalnet payment plugin - WooCommerce - 12.3.0\n"
+"POT-Creation-Date: 2022-06-03 18:22+0530\n"
+"PO-Revision-Date: 2017-05-26 18:35+0530\n"
+"Last-Translator: Novalnet AG <sales@novalnet.de>\n"
+"Language-Team: Novalnet <sales@novalnet.de>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_;gettext;gettext_noop;_;"
+"gettext;gettext_noop;_;gettext;gettext_noop;__;_e;__ngettext:1,2;_n:1,2;"
+"__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"_nx_noop:4c,1,2;esc_attr_e\n"
+"X-Poedit-Basepath: ../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class-wc-novalnet.php:573
+#, php-format
+msgid ""
+"The <b>Novalnet payment plugin</b> for WooCommerce will function only if the "
+"WooCommerce plugin is active.Please %1$s install and activate WooCommerce "
+"plugin %2$s "
+msgstr ""
+
+#: class-wc-novalnet.php:610
+msgid "Please enter valid birth date"
+msgstr ""
+
+#: class-wc-novalnet.php:611 includes/class-wc-novalnet-subscription.php:601
+#: includes/gateways/class-wc-gateway-novalnet-guaranteed-sepa.php:144
+#: includes/gateways/class-wc-gateway-novalnet-instalment-sepa.php:129
+#: includes/gateways/class-wc-gateway-novalnet-sepa.php:138
+msgid "Your account details are invalid"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:119
+msgid "Customer data cannot be left blank. Please enter the customer details."
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:243
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:268
+msgid "Please enter values in the required fields"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:387
+#: includes/class-wc-novalnet-subscription.php:690
+#: includes/class-wc-novalnet-subscription.php:1145
+#: includes/class-wc-novalnet-webhook.php:427
+#, php-format
+msgid "Successfully changed the payment method for next subscription on %s"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:497
+#, php-format
+msgid ""
+"Your action to change payment method failed for the renewal order due to %s"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:706
+msgid "Please note some data has been changed while redirecting"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:857
+msgid "Pay now with Barzahlen"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:879
+msgid "TESTMODE"
+msgstr ""
+
+#: includes/abstracts/class-wc-novalnet-abstract-payment-gateways.php:1062
+msgid "Save for future purchase"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:70
+msgid "All Payment Methods"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:148
+#: includes/admin/class-wc-novalnet-configuration.php:487
+msgid ""
+"In order to use this option you must have billing agreement option enabled "
+"in your PayPal account. Please contact your account manager at PayPal."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:149
+msgid ""
+"Are you sure you want to configure the Webhook URL in Novalnet Admin Portal?"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:150
+#: includes/admin/class-wc-novalnet-admin.php:226
+msgid "Please enter the valid webhook URL"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:151
+#: includes/admin/class-wc-novalnet-amount-refund.php:40
+msgid "Invalid refund amount"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:152
+msgid "Payment method cannot be changed"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:153
+msgid "Invalid TID"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:154
+msgid "Payment method cannot be left blank. Please choose a payment method."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:156
+msgid "Direct Debit SEPA with payment guarantee"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:157
+msgid "Invoice with payment guarantee"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:173
+msgid "Novalnet Global Configuration"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:210
+#: includes/admin/class-wc-novalnet-admin.php:258
+#: includes/class-wc-novalnet-validation.php:484
+msgid "Please enter the required fields under Novalnet API Configuration."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:246
+msgid ""
+"Notification / Webhook URL is configured successfully in Novalnet Admin "
+"Portal"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:278
+#: includes/class-wc-novalnet-validation.php:391
+#: includes/class-wc-novalnet-validation.php:518
+#: includes/class-wc-novalnet-validation.php:524
+#, php-format
+msgid "Minimum order amount should be greater than or equal to %s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:285
+msgid "Please add item(s) and click Recalculate before creating the order."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:322
+msgid "Configuration"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:340
+msgid "Please fill in the required fields"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:412
+msgctxt "meta box title"
+msgid "Instalment Summary"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:469
+#, php-format
+msgid "Amount %1$s has been updated successfully on %2$s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:490
+#, php-format
+msgid "Amount update failed due to: %s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:587
+#, php-format
+msgid "The transaction has been confirmed on %s."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:638
+#, php-format
+msgid "The transaction has been cancelled on %s."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:654
+#, php-format
+msgid ""
+"Instalment has been cancelled for the TID: %1$s on %2$s & Refund has been "
+"initiated with the amount %3$s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:668
+#: includes/admin/class-wc-novalnet-amount-refund.php:70
+#, php-format
+msgid "Refund has been initiated for the TID: %1$s with the amount of %2$s."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:681
+#: includes/class-wc-novalnet-webhook.php:707
+#, php-format
+msgid " New TID:%s for the refunded amount"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:702
+#: includes/class-wc-novalnet-subscription.php:458
+msgid "No Transaction ID found for this Order"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:733
+msgid "Subscription orders are not supported in the backend order creation."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-admin.php:753
+msgid "Transaction ID already exists."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-amount-refund.php:42
+msgid "Refund has been already initiated for the order"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-amount-refund.php:75
+#, php-format
+msgid "New TID:%s for the refunded amount"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-amount-refund.php:112
+#, php-format
+msgid "Payment refund failed for the order: %1$s due to: %2$s."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:103
+#: includes/admin/class-wc-novalnet-configuration.php:131
+msgid "Basic requirements:"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:105
+#: includes/admin/class-wc-novalnet-configuration.php:133
+#, php-format
+msgid "Allowed B2C countries: %s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:106
+#: includes/admin/class-wc-novalnet-configuration.php:134
+msgid "Allowed B2B countries: European Union"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:108
+#: includes/admin/class-wc-novalnet-configuration.php:136
+#, php-format
+msgid "Allowed currency: %s"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:110
+#: includes/admin/class-wc-novalnet-configuration.php:138
+#, php-format
+msgid "Minimum order amount: %s or more"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:111
+msgid ""
+"Please note that the instalment cycle amount has to be a minimum of 9.99 EUR "
+"and the instalment cycles which do not meet this criteria will not be "
+"displayed in the instalment plan"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:112
+#: includes/admin/class-wc-novalnet-configuration.php:139
+msgid "Age limit: 18 years or more"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:113
+#: includes/admin/class-wc-novalnet-configuration.php:140
+#: includes/class-wc-novalnet-validation.php:398
+msgid "The billing address must be the same as the shipping address"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:160
+msgid "Make sure the Direct Debit SEPA payment is enabled to use this option."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:162
+msgid "Make sure the Invoice payment is enabled to use this option."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:167
+msgid "Force Non-Guarantee payment"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:172
+msgid ""
+"Even if payment guarantee is enabled, payments will still be processed as "
+"non-guarantee payments if the payment guarantee requirements are not met."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:178
+msgid "Allow B2B Customers"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:181
+msgid "Allow B2B customers to place order"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:197
+msgid "Display Instalment Plan on Product Detail Page"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:199
+msgid ""
+"Control whether or not an instalment plan should be displayed in the product "
+"page"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:223
+#, php-format
+msgid "%d cycles"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:226
+#: templates/checkout/render-guaranteed-instalment-form.php:95
+msgid "Instalment cycles"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:243
+msgid "Select the instalment cycles that can be availed in the instalment plan"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:260
+msgid "Payment Action"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:263
+msgid ""
+"Choose whether or not the payment should be charged immediately. Capture "
+"completes the transaction by transferring the funds from buyer account to "
+"merchant account. Authorize verifies payment details and reserves funds to "
+"capture it later, giving time for the merchant to decide on the order."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:266
+msgid "Capture"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:267
+msgid "Authorize"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:275
+msgid "Minimum transaction amount for authorization"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:277
+#: includes/admin/class-wc-novalnet-configuration.php:522
+msgid "(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:278
+msgid ""
+"In case the order amount exceeds the mentioned limit, the transaction will "
+"be set on-hold till your confirmation of the transaction. You can leave the "
+"field empty if you wish to process all the transactions as on-hold."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:309
+msgid "Novalnet API Configuration"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:313
+#, php-format
+msgid ""
+"You must add the following webhook endpoint <code>%s</code> to your <a href="
+"\"https://admin.novalnet.de\" target=\"_blank\">Novalnet Admin portal</a>. "
+"This will allow you to receive notifications about the transaction status."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:324
+msgid "Your project is in test mode"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:324
+#, php-format
+msgid ""
+"Please read the Installation Guide before you start and login to the %1$s "
+"Novalnet Admin Portal%2$s using your merchant account. To get a merchant "
+"account, mail to sales@novalnet.de or call +49 (089) 923068320."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:327
+msgid "Product activation key"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:328
+msgid ""
+"Get your Product activation key from the <a href=\"https://admin.novalnet.de"
+"\" target=\"_blank\">Novalnet Admin Portal</a> PROJECT > Choose your project "
+"> Shop Parameters > API Signature (Product activation key) "
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:330
+msgid ""
+"Your product activation key is a unique token for merchant authentication "
+"and payment processing. "
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:339
+msgid "Payment access key "
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:340
+msgid ""
+"Get your Payment access key from the <a href=\"https://admin.novalnet.de\" "
+"target=\"_blank\">Novalnet Admin Portal</a> PROJECT > Choose your project > "
+"Shop Parameters > Payment access key"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:342
+msgid ""
+"Your secret key used to encrypt the data to avoid user manipulation and "
+"fraud."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:350
+msgid "Select Tariff ID"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:351
+#: includes/admin/class-wc-novalnet-configuration.php:353
+msgid ""
+"Select a Tariff ID to match the preferred tariff plan you created at the "
+"Novalnet Admin Portal for this project"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:366
+msgid "Display payment logo"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:367
+msgid "The payment method logo(s) will be displayed on the checkout page"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:374
+#: includes/admin/class-wc-novalnet-configuration.php:375
+msgid "Debug log"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:381
+#, php-format
+msgid "Find the Novalnet payment events log in this path:  <code>%s.txt</code>"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:389
+msgid "Notification / Webhook URL Setup"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:394
+msgid "Notification / Webhook URL"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:399
+msgid "Configure"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:400
+msgid ""
+"You must configure the webhook endpoint in your <a href=\"https://admin."
+"novalnet.de\" target=\"_blank\">Novalnet Admin portal</a>. This will allow "
+"you to receive notifications about the transaction"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:403
+msgid "Allow manual testing of the Notification / Webhook URL"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:407
+msgid ""
+"Enable this to test the Novalnet Notification / Webhook URL manually. "
+"Disable this before setting your shop live to block unauthorized calls from "
+"external parties"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:411
+msgid "Send e-mail to "
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:412
+msgid ""
+" Notification / Webhook URL execution messages will be sent to this e-mail"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:425
+msgid "Subscription Management"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:431
+msgid "Enable subscription"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:438
+msgid "Subscription payments"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:447
+msgid "Select Subscription Tariff ID"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:449
+msgid ""
+"Select the preferred Novalnet subscription tariff ID available for your "
+"project. For more information, please refer the Installation Guide"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:458
+msgid "Display Subscription Cancellation Option for End User"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:484
+msgid ""
+"Payment details stored during the checkout process can be used for future "
+"payments"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:491
+msgid "One-click shopping"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:517
+msgid "Minimum order amount"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:519
+msgid ""
+"Minimum order amount to display the selected payment method (s) at during "
+"checkout"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:541
+msgid "Callback / webhook order status"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:543
+msgid ""
+"Status to be used when callback script is executed for payment received by "
+"Novalnet"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:561
+msgid "Payment due date (in days)"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:562
+msgid ""
+"Number of days after which the payment is debited (must be between 2 and 14 "
+"days)."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:566
+msgid ""
+"Number of days given to the buyer to transfer the amount to Novalnet (must "
+"be greater than 7 days). If this field is left blank, 14 days will be set as "
+"due date by default."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:570
+msgid ""
+"Number of days given to the buyer to transfer the amount to Novalnet (must "
+"be between 7 and 28 days). If this field is left blank, 14 days will be set "
+"as due date by default."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:574
+msgid "Slip expiry date (in days)"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:575
+msgid ""
+"Number of days given to the buyer to pay at a store. If this field is left "
+"blank, 14 days will be set as slip expiry date by default."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:609
+msgid "English"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:617
+msgid "Enable payment method"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:623
+msgid "Enable test mode"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:627
+msgid ""
+"The payment will be processed in the test mode therefore amount for this "
+"transaction will not be charged"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:636
+msgid ""
+"Payment name & description language <span class=\"dashicons dashicons-"
+"translation\" aria-hidden=\"true\"></span>"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:651
+msgid "Title"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:664
+msgid "Description"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:670
+msgid "Instructions"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:672
+msgid "Instructions that will be added to the thank you page and emails."
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:682
+msgid "Completed order status"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:687
+msgid "Status to be used for successful orders"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:746
+#: includes/admin/class-wc-novalnet-configuration.php:753
+msgid ""
+"Funds are withdrawn from the buyer's account using credit/debit card details"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:760
+msgid ""
+"Europe-wide Direct Debit system that allows you to collect Euro currencies "
+"from buyers in the 34 SEPA countries and associated regions"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:767
+msgid ""
+"Electronic wallet that alows buyers to pay using any payment modes they have "
+"added to their PayPal account"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:774
+msgid ""
+"Dutch payment method that allow your buyers to make instant payments online "
+"through his own bank"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:781
+msgid ""
+"Swiss based online account system where buyers are redirected to login and "
+"pay using their PostFinance Card"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:788
+msgid ""
+"Swiss based online card payment method which allows buyers to pay using "
+"PostFinance Card"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:795
+msgid ""
+"German based online payment method where funds are instantly transferred "
+"from buyer's account to your account"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:802
+msgid ""
+"Austria based online banking method that allows your buyers to pay using any "
+"form of electronic payments"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:810
+#: includes/admin/class-wc-novalnet-configuration.php:817
+msgid ""
+"Pan European payment method allows buyers to pay through their own internet "
+"banking system"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:824
+msgid ""
+"Poland based payment method which allows buyers pay using bank transfers or "
+"any other methods"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:829
+msgid ""
+"Payment is debited after order confirmation and, the goods are then delivered"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:834
+msgid "A payable credit note with the order details"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:841
+msgid ""
+"Transaction is completed through cash payments using cash slips in countries "
+"like Germany and Austria"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:848
+msgid ""
+"Voucher based payment method where buyer pays in ATM or at retail outlets "
+"using a reference ID"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:855
+msgid ""
+"Belgium based online payment method where buyers are redirected to "
+"Bancontact site/app for payment authorization"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:862
+msgid ""
+"Guaranteed payment made to you either from the buyer or from payment "
+"guarantee for the purchase made through invoice"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:872
+msgid ""
+"Guaranteed payment made to you either from the buyer or from payment "
+"guarantee for the purchase made through SEPA"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:877
+msgid ""
+"Buyer pays his bill as instalment payments through a single or recurring "
+"invoice(s)"
+msgstr ""
+
+#: includes/admin/class-wc-novalnet-configuration.php:884
+msgid ""
+"Through this payment method you can collect amount periodically like "
+"subscription or instalment payments through SEPA"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:18
+#: templates/emails/render-instalment-details.php:32
+#: templates/myaccount/render-instalment-details.php:19
+msgid "S.no"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:19
+#: templates/emails/render-instalment-details.php:33
+#: templates/myaccount/render-instalment-details.php:20
+msgid "Date"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:20
+#: templates/emails/render-instalment-details.php:35
+#: templates/myaccount/render-instalment-details.php:22
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:21
+#: templates/emails/render-instalment-details.php:34
+#: templates/myaccount/render-instalment-details.php:21
+msgid "Novalnet transaction ID"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:22
+msgid "Status"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:23
+msgid "Instalment refund"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:83
+msgid "Refund"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:89
+msgid "Refund amount"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:97
+msgid "Note: Refund reason will be shown to the customer"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:97
+msgid "Reason for refund (optional):"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:107
+#: includes/wc-novalnet-functions.php:129
+msgid "Confirm"
+msgstr ""
+
+#: includes/admin/meta-boxes/views/html-instalment-summary.php:108
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-wc-novalnet-guaranteed-process.php:254
+#, php-format
+msgid "%1$s x %2$s (per month)"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:138
+msgid "Please enter the required fields under Novalnet API Configuration"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:155
+msgid ""
+"Your order is under verification and we will soon update you with the order "
+"status. Please note that this may take upto 24 hours."
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:165
+#, php-format
+msgid ""
+"Please use the following payment reference details to pay the amount of %s "
+"at a Multibanco ATM or through your internet banking."
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:168
+#, php-format
+msgid "Payment Reference : %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:190
+#, php-format
+msgid "Novalnet transaction ID: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:192
+msgid "Test order"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:239
+#, php-format
+msgid "Slip expiry date : %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:241
+msgid "Store(s) near to you: "
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:280
+#, php-format
+msgid ""
+"Please transfer the amount of %1$s to the following account on or before %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:283
+#, php-format
+msgid ""
+"Please transfer the instalment cycle amount of %1$s to the following account "
+"on or before %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:288
+#, php-format
+msgid "Please transfer the amount of %1$s to the following account."
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:291
+#, php-format
+msgid ""
+"Please transfer the instalment cycle amount of %1$s to the following account."
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:297
+#, php-format
+msgid "Account holder: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:300
+#, php-format
+msgid "Bank: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:303
+#, php-format
+msgid "Place: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:306
+#, php-format
+msgid "IBAN: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:309
+#, php-format
+msgid "BIC: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:318
+msgid ""
+"Please use any of the following payment references when transferring the "
+"amount. This is necessary to match it with your corresponding order"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:320
+#, php-format
+msgid "Payment Reference 1: TID %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-helper.php:324
+#, php-format
+msgid "Payment Reference 2: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:172
+#: includes/class-wc-novalnet-subscription.php:205
+msgid "Please select reason"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:204
+msgid "Change Payment"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:286
+msgid "The date should be in future."
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:409
+#: includes/class-wc-novalnet-webhook.php:294
+#, php-format
+msgid "This subscription transaction has been suspended on %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:415
+#, php-format
+msgid ""
+"Subscription has been reactivated for the TID: %1$s on %2$s. Next charging "
+"date : %3$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:423
+#, php-format
+msgid "Subscription has been cancelled due to: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:427
+#, php-format
+msgid "Subscription updated successfully. You will be charged %1$s on %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:452
+#: includes/class-wc-novalnet-subscription.php:458
+#, php-format
+msgid "Recent action failed due to: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:560
+msgid "Please accept the change of payment method by clicking on the checkbox"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:616
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:158
+msgid "Your card details are invalid"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:716
+msgid "Card type not accepted, try using another card type"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:724
+#: templates/checkout/render-cc-form.php:44
+msgid "More security with the new Payment Policy (PSD2) Info"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:725
+#: templates/checkout/render-cc-form.php:45
+msgid ""
+"European card issuing banks often requires a password or some other form of "
+"authentication (EU Payment Services Directive \"PSD2\") for secure payment. "
+"If the payment is not successful, you can try again. If you have any further "
+"questions, please contact your bank."
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:765
+#: templates/checkout/render-sepa-form.php:24
+msgid "IBAN"
+msgstr ""
+
+#: includes/class-wc-novalnet-subscription.php:925
+msgid "Payment method updated successfully."
+msgstr ""
+
+#: includes/class-wc-novalnet-validation.php:373
+msgid "You need to be at least 18 years old"
+msgstr ""
+
+#: includes/class-wc-novalnet-validation.php:381
+msgid "Please enter your date of birth"
+msgstr ""
+
+#: includes/class-wc-novalnet-validation.php:487
+#, php-format
+msgid " Novalnet API configuration can be adjusted <a href=\"%s\">here</a>."
+msgstr ""
+
+#: includes/class-wc-novalnet-validation.php:504
+msgid "Please select atleast one of the instalment cycles to proceed"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:189
+msgid "Notification received from Novalnet for this order. "
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:315
+#, php-format
+msgid "Subscription has been cancelled due to: %s. "
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:346
+#, php-format
+msgid ""
+"Subscription has been reactivated for the TID:%1$s on %2$s. Next charging "
+"date :%3$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:417
+#, php-format
+msgid "Subscription updated successfully. You will be charged %1$s on %2$s."
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:463
+#, php-format
+msgid ""
+"Subscription has been successfully renewed for the TID: %1$s with the amount "
+"%2$s on %3$s. The renewal TID is:%4$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:497
+#, php-format
+msgid ""
+"Subscription has been cancelled since the subscription has exceeded the "
+"maximum time period for the TID: %s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:504
+#, php-format
+msgid "Next charging date will be on %1$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:526
+#, php-format
+msgid ""
+"A new instalment has been received for the Transaction ID:%1$s with amount "
+"%2$s. The new instalment transaction ID is: %3$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:571
+#, php-format
+msgid "Instalment has been cancelled for the TID %1$s on %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:586
+#: includes/class-wc-novalnet-webhook.php:589
+#, php-format
+msgid ""
+"Credit has been successfully received for the TID: %1$s with amount %2$s on "
+"%3$s. Please refer PAID order details in our Novalnet Admin Portal for the "
+"TID: %4$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:629
+#, php-format
+msgid "The transaction has been confirmed on %1$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:673
+#: includes/class-wc-novalnet-webhook.php:763
+#, php-format
+msgid "The transaction has been cancelled on %1$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:700
+#: includes/class-wc-novalnet-webhook.php:839
+#, php-format
+msgid "Payment refund failed for the order: %1$s due to: %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:704
+#, php-format
+msgid "Refund has been initiated for the TID:%1$s with the amount %2$s"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:743
+#, php-format
+msgid ""
+"Chargeback executed successfully for the TID: %1$s amount: %2$s on %3$s. The "
+"subsequent TID: %4$s."
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:855
+#, php-format
+msgid "%s fee"
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:873
+#, php-format
+msgid ""
+"Transaction updated successfully for the TID: %1$s with amount %2$s and due "
+"date %3$s."
+msgstr ""
+
+#: includes/class-wc-novalnet-webhook.php:876
+#, php-format
+msgid "Transaction updated successfully for the TID: %1$s with amount %2$s."
+msgstr ""
+
+#: includes/class-wc-payment-token-novalnet.php:243
+#, php-format
+msgid "%1$s ending in %2$s (expires %3$s/%4$s)"
+msgstr ""
+
+#: includes/class-wc-payment-token-novalnet.php:252
+#, php-format
+msgid "IBAN %s"
+msgstr ""
+
+#: includes/class-wc-payment-token-novalnet.php:258
+#: includes/class-wc-payment-token-novalnet.php:299
+#, php-format
+msgid "PayPal account: %s"
+msgstr ""
+
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:28
+msgid "New Instalment"
+msgstr ""
+
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:29
+msgid ""
+"New instalment cycle email is sent when a new instalment cycle is processed"
+msgstr ""
+
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:31
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:122
+msgid "New Instalment for the order"
+msgstr ""
+
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:32
+#: includes/emails/class-wc-novalnet-email-new-instalment.php:112
+msgid "[{blogname}] New Instalment for the order"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:129
+msgid "Seller Name"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:131
+msgid ""
+"This is the text that appears as PAY SELLER NAME in the Apple Pay payment "
+"sheet."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:141
+msgid "Button Design"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:143
+msgid "Style for Apple pay button"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:147
+msgid "Button Type"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:168
+msgid "Button Theme"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:205
+msgid "Display the Apple Pay Button on"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:210
+msgid "Shopping cart page"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:211
+msgid "Mini cart page"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:212
+msgid "Product page"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:213
+msgid "Guest checkout page"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-applepay.php:214
+msgid "Checkout page"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:280
+msgid "Enable inline form"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:284
+msgid ""
+"Inline form: The following fields will be shown in the checkout in two "
+"lines: card holder & credit card number / expiry date / CVC"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:290
+msgid "Enforce 3D secure payment outside EU"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:294
+msgid ""
+"By enabling this option, all payments from cards issued outside the EU will "
+"be authenticated via 3DS 2.0 SCA."
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:300
+msgid "Display Credit/Debit card logos"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:305
+msgid "Visa"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:306
+msgid "Mastercard"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:307
+msgid "Maestro"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:308
+msgid "American Express"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:309
+msgid "Union Pay"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:310
+msgid "Discover"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:311
+msgid "Diners Club"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:312
+msgid "JCB"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:313
+msgid "Carte Bleue"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:314
+msgid "Cartasi"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:333
+msgid "Custom CSS settings"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:335
+msgid "CSS settings for iframe form"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:339
+msgid "Label"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:344
+msgid "Input"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-cc.php:349
+msgid "CSS Text"
+msgstr ""
+
+#: includes/gateways/class-wc-gateway-novalnet-paypal.php:196
+#, php-format
+msgid ""
+"To accept PayPal transactions, configure your PayPal API info in the  "
+"%1$sNovalnet Admin Portal%2$s > PROJECT > \"Project\" Information > Payment "
+"Methods > Paypal > Configure."
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:141
+msgid "--Select--"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:142
+msgid "Product is costly"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:143
+msgid "Cheating"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:144
+msgid "Partner interfered"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:145
+msgid "Financial problem"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:146
+msgid "Content does not match my likes"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:147
+msgid "Content is not enough"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:148
+msgid "Interested only for a trial"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:149
+msgid "Page is very slow"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:150
+msgid "Not happy customer"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:151
+msgid "Logging in problems"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:152
+msgid "Other"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:266
+msgid "Payment was not successful. An error occurred"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:623
+msgid ""
+"I hereby grant the mandate for the SEPA direct debit (electronic "
+"transmission) and confirm that the given bank details are correct!"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:625
+msgid ""
+"I authorise (A) Novalnet AG to send instructions to my bank to debit my "
+"account and (B) my bank to debit my account in accordance with the "
+"instructions from Novalnet AG."
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:626
+msgid "Creditor identifier: DE53ZZZ00000004253"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:627
+msgid "Note:"
+msgstr ""
+
+#: includes/wc-novalnet-functions.php:628
+msgid ""
+"You are entitled to a refund from your bank under the terms and conditions "
+"of your agreement with bank. A refund must be claimed within 8 weeks "
+"starting from the date on which your account was debited."
+msgstr ""
+
+#: novalnet-payment-gateway.php:53
+msgid "Novalnet payment plugin - WooCommerce"
+msgstr ""
+
+#: novalnet-payment-gateway.php:54
+msgid ""
+"PCI compliant payment solution, covering a full scope of payment services "
+"and seamless integration for easy adaptability"
+msgstr ""
+
+#: templates/checkout/render-guaranteed-instalment-form.php:40
+msgid "Your date of birth"
+msgstr ""
+
+#: templates/checkout/render-guaranteed-instalment-form.php:41
+msgid "DD.MM.YYYY"
+msgstr ""
+
+#: templates/checkout/render-guaranteed-instalment-form.php:73
+#, php-format
+msgid "Choose your instalment plan <b>(Net loan amount: %s )</b>"
+msgstr ""
+
+#: templates/checkout/render-guaranteed-instalment-form.php:96
+msgid "Instalment Amount"
+msgstr ""
+
+#: templates/checkout/render-instalment-suggestions-form.php:13
+msgid "You can pay this article in instalments."
+msgstr ""
+
+#: templates/checkout/render-instalment-suggestions-form.php:15
+msgid "Learn more"
+msgstr ""
+
+#: templates/checkout/render-instalment-suggestions-form.php:69
+msgid "Things to note:"
+msgstr ""
+
+#: templates/checkout/render-instalment-suggestions-form.php:71
+msgid "Available in Germany, Austria and Switzerland"
+msgstr ""
+
+#: templates/checkout/render-instalment-suggestions-form.php:72
+msgid "The shipping address must be the same as the billing address"
+msgstr ""
+
+#: templates/emails/customer-new-instalment-order.php:44
+msgid "Thank you for shopping with us."
+msgstr ""
+
+#: templates/emails/render-instalment-details.php:25
+msgid "Instalment Summary"
+msgstr ""
