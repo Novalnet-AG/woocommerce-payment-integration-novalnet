@@ -11,7 +11,7 @@ Novalnet payment plugin for WooCommerce simplifies your daily work by automating
 * 60+ risk & payment fraud detection modules to prevent defaults in real time
 * Effortless configuration of risk management with fraud prevention
 * Affiliate solution supporting frictionless onboarding, split payments & currency conversion
-* Dynamic subscription and member management for recurring payments
+* Dynamic subscription for recurring payments
 * No PCI DSS certification required when using our payment module
 * Clear overview of payment status from checkout to receivables
 * Multilevel claims management with integrated handover to collection and various export functions for the accounting
