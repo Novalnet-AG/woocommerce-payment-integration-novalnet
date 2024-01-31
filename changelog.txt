@@ -1,5 +1,11 @@
 *** Changelog ***
 
+= 12.6.3   - 2024.01.31 =
+* Fix      - Return URLs integrated with payment requests during tokenization for Credit Card and Debit Card payments
+* Fix      - Order numbers are included in the callback event email for accurate transaction mapping
+* Fix      - Apple Pay transactions are restricted to countries other than the non-shipping country
+* Enhanced - Built-in Sub-Resource Integrity (SRI) integrated for JavaScript files to improve security for preventing unauthorized modifications
+
 = 12.6.2   - 2023.11.24 =
 * Fix	   - Plugin optimized for High-Performance Order Storage (HPOS) for WooCommerce
 * Fix	   - Notifying shop admin about wallet payment transactions via Germanized Plugin
