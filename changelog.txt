@@ -5,6 +5,7 @@
 * Fix      - Order numbers are included in the callback event email for accurate transaction mapping
 * Fix      - Apple Pay transactions are restricted to countries other than the non-shipping country
 * Enhanced - Built-in Sub-Resource Integrity (SRI) integrated for JavaScript files to improve security for preventing unauthorized modifications
+* Removed  - Restricted PayPal payment method for the Zero amount transactions
 
 = 12.6.2   - 2023.11.24 =
 * Fix	   - Plugin optimized for High-Performance Order Storage (HPOS) for WooCommerce
