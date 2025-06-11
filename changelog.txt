@@ -1,0 +1,313 @@
+*** Changelog *** 
+
+= 12.8.2   - 2025.06.11 =
+* Fix - Automatically creates a renewal order when the renewal transaction fails with the subscription status of ACTIVE_WITH_COLLECTION
+* Fix - Google Pay and Apple Pay checkout are now blocked if no shipping method is selected
+* Fix - Payment plugin now supports overpaid transaction refunds through the Novalnet Admin portal
+* Fix - The subscription end date now updates correctly when the subscription is renewed
+* Fix - The Paid Date on the backend order page is now updated only after full payment has been received
+* Fix - Google Pay and Apple Pay now support automatic customer creation during checkout
+* Enhanced - Full refunds are now triggered automatically when orders are cancelled, based on the "Auto Refund by Cancelled Status" setting
+* Removed - The create_token parameter, as tokenization for Novalnet subscription orders is now handled server-side
+* Removed - Deprecated instant email hook from the Germanized plugin used in the Novalnet plugin
+
+= 12.8.1   - 2025.01.17 =
+* Enhanced - A renewal order will be created automatically if the transaction fails during the renewal process
+* Enhanced - Subscriptions are automatically canceled when the associated customer or subscription order is deleted
+
+= 12.8.0   - 2024.07.12 =
+* New      - Implemented TWINT payment
+* Fix      - Order status is now correctly updated to reflect successful transactions made on the second attempt via PayPal payment
+* Enhanced - API/Webhook Response is normalized in the payment plugin for Instalment Payments
+
+= 12.7.0   - 2024.05.17 =
+* New      - Implemented Direct Debit ACH, Blik, MB Way and Payconiq payments
+* Fix      - Payment plugin has been updated to handle the "Refunded" order status specifically for overpaid amounts
+* Fix      - Incorrect order statuses occurring when multiple orders are placed using the same browser session
+* Enhanced - Optimized the Callback/Webhook process for fetching Dynamic IP
+* Enhanced - Plugin name in the header comment is required to meet WordPress standards
+
+= 12.6.4   - 2024.03.01 =
+* Fix      - Display of PayPal and Guarantee payments for free trial subscription with signup fee
+* Fix      - Installment Payments are now handled for WooCommerce Block Checkout
+* Enhanced - Offering Installment payments to B2B customers in Switzerland
+* Enhanced - Extension of Installment Payment cycles till 36 cycles
+* Enhanced - Minification of CSS and JavaScript files for enhanced performance
+
+= 12.6.3   - 2024.01.31 =
+* Fix      - Return URLs integrated with payment requests during tokenization for Credit Card and Debit Card payments
+* Fix      - Order numbers are included in the callback event email for accurate transaction mapping
+* Fix      - Apple Pay transactions are restricted to countries other than the non-shipping country
+* Enhanced - Built-in Sub-Resource Integrity (SRI) integrated for JavaScript files to improve security for preventing unauthorized modifications
+* Removed  - Restricted PayPal payment method for the Zero amount transactions
+
+= 12.6.2   - 2023.11.24 =
+* Fix	   - Plugin optimized for High-Performance Order Storage (HPOS) for WooCommerce
+* Fix	   - Notifying shop admin about wallet payment transactions via Germanized Plugin
+* Fix	   - Plugin made compatible to work for block-based cart/checkout
+
+= 12.6.1   - 2023.09.26 =
+* Fix 	   - Customer Order notes are not displayed in the order confirmation email 
+* Enhanced - Subscription renewal order was created for failed transactions with the ACTIVE_WITH_COLLECTION webhook parameter
+
+= 12.6.0   - 2023.07.21 =
+* New      - Implemented Zero amount authorization for the payments Credit/Debit Cards, Direct Debit SEPA, Apple Pay, and Google Pay
+* Removed  - Payment due date configuration for Direct Debit SEPA With Payment Guarantee
+
+= 12.5.6   - 2023.06.09 =
+* Fix 	   - Adapted Credit/Debit Cards iframe for proper loading while using the WPML plugin
+* Fix	   - Restricted duplicate order creation with same TID during communication failure
+* Fix      - Exact date information shown on the subscription notes during the "Pay for the order" process
+* Enhanced - Payment description updated while changing the subscription payment method
+* Enhanced - For IBAN-specific countries, the BIC field required for the Gibraltar country for the payments like Direct Debit SEPA, Direct Debit SEPA with payment guarantee and Instalment by Direct Debit SEPA
+
+= 12.5.5  - 2023.03.30 =
+* Fix 	  - Plugin made compatible for WooCommerce version 7.5.1 
+* Fix 	  - Handled Guest users under the ‘Pay for order’ process
+* Fix 	  - Amount mismatch handled for WordPress Multilingual functionality
+
+= 12.5.4   - 2023.03.10 =
+* Fix      - Subscription free trial interval remains unchanged when payment zone is updated
+* Fix 	   - Subscription renewal orders placed successfully after migrating from other payment provider
+
+= 12.5.3   - 2023.01.28 =
+* Fix      - Subscription change payment method update from Shop default payment to Novalnet payment
+* Removed  - Button Theme configuration for Google Pay payment
+	
+= 12.5.2   - 2022.01.06 =
+* Fix 	   - Double bookings restricted for subscription transactions during subscription cycle date update
+
+= 12.5.1   - 2022.12.21 =
+* Fix 	   - Quick cancellation of digital subscription products handled through 'Cancel Now' button
+* Fix 	   - Subscription cancellation restricted to free trial products and recurring zero amount transactions
+* Enhanced - For failed subscription renewal, status update is handled through Callback/webhook  
+
+= 12.5.0   - 2022.12.05 =
+* New 	   - Implemented shop-based subscription
+* Enhanced - Invoice payment name is updated for German translation
+* Removed  - One-click shopping for PayPal payment
+
+= 12.4.0 - 2022.10.12 =
+* New      - Implemented Google Pay, Trustly, WeChat Pay and Alipay payments
+* New      - Apple Pay and Google Pay payments are now supported for the Subscription process
+* New 	   - Updated cart details to PayPal
+* New 	   - Callback/webhook events for payment reminders and submission to the collection agency has been added
+* Enhanced - For IBAN-specific countries, the BIC field displayed for payment like Direct Debit SEPA, Direct Debit SEPA with payment guarantee and Instalment by Direct Debit SEPA
+
+= 12.3.1 - 2022.07.05 =
+* Fix 	   - Adjusted Java script for loading Credit Card form
+
+= 12.3.0 - 2022.06.03 =
+* New      - Implemented Online bank transfer payment
+* New      - Added "state" parameter in the payment request 
+
+= 12.2.0 - 2022.05.16 =
+* New      - Implemented Apple Pay payment
+* Fix 	   - Shop admin receives the order confirmation email even after integrating with Germanized Plugin
+* Enhanced - Updated payment logo for Sofort payment
+
+= 12.1.0 - 2022.04.01 =
+* New 	   - Order creation process handled from the shop admin panel
+
+= 12.0.11 - 2022.01.10 =
+* Fix 	   - Adjusted payment plugin, when changing Subscription product into Normal product
+
+= 12.0.10 - 2021.12.10 =
+* Fix 	   - Adjusted the payment plugin for multistep checkout page to support Germanized pro plugin
+* Fix      - Adjusted the instalment cycle amount in order confirmation e-mail for end-customers
+
+= 12.0.9 - 2021.10.11 =
+* Fix 	   - Default Hold stock duration is extended for pending orders to avoid order cancellation
+* Fix      - Order amount rounded to 2 decimal factors while sending to the Novalnet server
+
+= 12.0.8 - 2021.09.20 =
+* Fix      - Payment redirection is optimized for successful transactions when previous transactions failed for the same order
+
+= 12.0.7 - 2021.06.17 =
+* Fix      - Optimized payment enabling in the payment method page
+* Enhanced - Credit/Debit Cards payment method description
+* Enhanced - Optimized the payment plugin for Virtual and Downloadable products
+* Enhanced - For every recurring subscription orders the parent order number is used as reference transactions
+
+= 12.0.6 - 2021.05.13 =
+* New 	- Subscription reactivation handled, when Subscription order is 'Cancelled'
+* Fix 	- Error logs from Przelewy24 payment
+* Fix 	- Adjusted the payment plugin for Cron execution error
+* Fix 	- Refund process for PayPal payment
+* Enhanced - Exact order numbers are fetched and updated for the subscription renewal orders
+* Enhanced - Instalment summary template for Instalment by Direct Debit SEPA and Instalment by Invoice
+
+= 12.0.5 - 2021.02.15 =
+* Fix   - HTML Tag in "Customer provided note" for WooCommerce 5.0.0 compatibility
+
+= 12.0.4 - 2021.02.05 =
+* Fix 	- Notice error during wp-cron execution
+* Fix 	- Webhook: Transaction update status reflected as a transaction refund for instalment payments
+* Fix 	- Invoice & Direct Debit SEPA payment methods are disabled during the subscription change payment method when payment guaranteed conditions are met
+* Fix 	- Change payment option hidden in shop front-end when the minimum order amount is configured for subscription payments
+* Enhanced - Added NovalnetUtility.js in the checkout page
+* Enhanced - Webhook: Transaction refund updated for the corresponding instalment cycles
+* Enhanced - Subscription change payment method in back-end has been optimized for the Credit/Debit payment
+* Enhanced - Updated new transaction details in the subscription notes section for subscription change payment method
+
+= 12.0.3 - 2020.12.30 =
+* Fix 	- Amount mismatched during Credit Card authentication process
+
+= 12.0.2 - 2020.12.16 =
+* Fix   - Optimized IP condition check for the parameter transaction.system_ip
+* Fix	- Customer card/account details will not stored if Save future purchase checkbox is unchecked
+* Fix   - Payment plugin has been adjusted for the guest users during signup process in the checkout page
+* Fix   - Payment plugin has been adjusted for 32 bit operating system
+* Fix   - Subscription reactive and cancelled handled for the expired subscriptions
+* Fix   - Callback execution has been optimized to execute without the order number
+* Enhanced - Adjusted validation in the checkout page for date of birth field
+* Enhanced - Payment confirmation mail for end-customer designed with a new email template
+
+= 12.0.1 - 2020.12.02 =
+* Fix       - Installment renewal summary update
+* Fix       - Extended the support for the customized order number
+* Enhanced  - Added new parameter: customer.tel
+
+= 12.0.0 - 2020.11.27 =
+* Major version release: Entire restructure & optimization of the older version with usability, additional features, and customizations.
+
+= 11.3.5 - 2020.10.30 =
+* Fix     - Chrome Samesite Cookies
+
+= 11.3.4 - 25.02.2020 =
+* New     - Customized date of birth field in checkout page
+* Fix     - Compatibility for WooCommerce 3.9.1
+
+= 11.3.3 - 17.01.2020 =
+* New 	   - German text has been added for date of birth text field
+* New 	   - In the checkout page, instalments cycle information has been displayed for the end customer
+* Enhanced - Credit Card iframe has been optimized
+* Enhanced - Vendor script has been optimized  
+
+= 11.3.2 - 05.11.2019 =
+* New 	   - Update shipping address to PayPal
+* Removed  - Instalments cycle information removed for the end customer
+
+= 11.3.1 - 18.09.2019 =
+* Fix 	   - Subscription woocommerce_scheduled_subscription_end_of_prepaid_term type action has been unscheduled for the reactivated subscription
+* Fix	   - Order status issue for Przelewy24 payment based on the external plugin for customizing the order number
+* Fix      -  Novalnet Merchant Administration Portal link has been updated in the backend order notes
+* Enhanced - Adjusted the Novalnet payment plugin based on the woocommerce subscription plugin 
+
+= 11.3.0 -  30.08.2019 =
+* New	   - Implemented instalment payment for Direct Debit SEPA and Invoice
+* Enhanced - Adjusted the payment module for IPV6 condition 
+* Enhanced - Implemented new encryption method for redirect payments 
+* Enhanced - Auto configuration call perform via cURL method 
+* Enhanced - Callback has been optimized as per the new testcase 
+* Removed  - Payment reference configuration for Invoice / prepayment 
+* Removed  - Transaction reference in payments
+
+= 11.2.16 - 22.07.2019 =
+* Fix	  - Adjusted validation in the checkout page for company field
+* Fix     - Issue in displaying the Guaranteed Direct Debit SEPA payment in checkout page
+* Fix	  - Issue in subscription change payment method for Direct Debit SEPA
+
+= 11.2.15 - 19.06.2019 =
+* Fix 	   - Issue with checkout process on account creation
+* Fix 	   - Adjusted Java script for loading Credit Card form
+* Enhanced - New language adopted for Deutsch(sie)
+* Enhanced - Novalnet bank details will be displayed in invoice for on-hold transactions in Invoice, Invoice with payment guarantee and Prepayment
+
+= 11.2.14 - 20.05.2019 =
+* Enhanced - Novalnet payment plugin has been optimized for checkout template
+
+= 11.2.13 - 24.04.2019 =
+* Fix - Compatible issue for WooCommerce 3.6.1
+
+= 11.2.12 - 17.04.2019 =
+* Fix  	    - Updated the multistep checkout page working for the Germanized pro plugin
+* Enhanced  - Subscription cancellation option for end user with merchant control
+* Enhanced  - Novalnet payment plugin has been optimized as per new test case
+
+= 11.2.11 - 27.03.2019 =
+* Fix     - Updated the subscription change payment method working in the vendor script
+* Fix     - Updated the multistep checkout page working for the Germanized pro plugin
+
+= 11.2.10 - 30.01.2019 =
+* Fix      - Unified processing and checking of session
+* Fix 	   - Handling of communication failure for payments with payment guarantee
+* Enhanced - Enhanced synchronization between shop and Novalnet system
+
+= 11.2.9 - 22.12.2018 =
+* Fix      - Compatible issue for WordPress 5
+* Enhanced - Guaranteed payment minimum amount reduced to 9.99 EUR
+* Removed  - Autofill for payment data
+* Removed  - BIC field for Direct Debit SEPA
+
+= 11.2.8 - 05.10.2018 =
+* Enhanced - Guaranteed payment pending status has been implemented
+* Enhanced - Callback has been optimized as per the new testcase
+
+= 11.2.7 - 07.06.2018 =
+* Fix - Adjusted payment module to restrict the double transaction in custom theme
+
+= 11.2.6 - 24.01.2018 =
+* New      - Custom checkout overlay for Barzahlen
+* New      - Force 3D secure process has been implemented as per predefined filters and settings in the Novalnet admin portal
+* Enhanced - Due date update notification in the shop, on activation of transaction for Invoice, Invoice with payment guarantee and Prepayment
+* Enhanced - On-hold transaction configuration has been implemented for Credit Card, Direct Debit SEPA, Direct Debit SEPA with payment guarantee, Invoice, Invoice with payment guarantee and PayPal
+* Enhanced - Optimized IP condition check for remote address
+	
+= 11.2.5 - 22.12.2017 =
+* Enhanced - Optimized vendor script validation for handling communication failure transaction
+
+= 11.2.4 - 21.11.2017 =
+* Fixed    - Fetching the order amount from the cart instead of session, to make it compatible for the WooCommerce version (above 3.2.0)	 
+* Enhanced - Dynamic IP control applied through domain instead of static IP in vendor script. Actual IP of Novalnet will be extracted in real time from the domain
+
+= 11.2.3 - 03.11.2017 =
+* New      - Implemented Barzahlen payment method
+* Enhanced - Optimized vendor script validation
+* Removed  - Enable debug mode configuration in Merchant script management
+
+= 11.2.2 - 29.08.2017 =
+* Fixed    - Optimized Credit Card and Direct Debit SEPA script
+* Enhanced - Adjusted opacity for form payments
+* Enhanced - Merchant Administration Portal link has been updated in shop admin
+* Enhanced - Date of birth field format has been updated 
+* Removed  - Refund with account details from shop admin
+
+= 11.2.1 - 07.06.2017 =
+* Fix        - Custom order note not displaying
+* Fix        - Next charging date shouldn't display for last recurring
+* Fix 	     - IP address issue for windows running IIS v6
+* Enhanced   - Optimized subscription configuration settings
+* Compatible - Tested with WordPress version upto 4.8.1, WooCommerce version upto 3.1.2 and Subscription version upto 2.2.11
+
+= 11.2.0 - 13.04.2017 =
+* Compatible - Tested with Wordpress version upto 4.4.7, WooCommerce version upto 3.0.4 and Subscription version upto 2.2.4
+
+= 11.1.1 - 03.04.2017 =
+* New        - Implemented Novalnet updates page
+* Enhanced   - Updated payment logo for Credit Card and Invoice payment
+* Enhanced   - Added new parameter in all API calls
+* Fix	     -  Restriction of email notification to the end customer on callback execution
+* Fix        -  Issue with single iteration Subscription product (Eg: price per month for 1 month)
+* Compatible - Tested with WordPress version 4.7.3 and Subscription version 2.1.4
+
+= 11.1.0 - 21.02.2017 =
+* Credit Card iframe updated.
+* One click shopping for Credit Card and PayPal implemented.
+* Edit option in Credit Card and PayPal for registered customers implemented.
+* Zero amount booking for PayPal implemented.
+* On-hold transactions for PayPal implemented.
+* New payment method "Przelewy24" added.
+
+= 11.0.0 - 25.04.2016 =
+* Auto configuration of vendor credentials
+* Zero amount booking
+* One click shopping for Direct Debit SEPA
+* Iframe and hosted page implementation for Credit Card
+* Implemented Direct Debit SEPA with payment guarantee, Invoice with payment guarantee
+* Edit option in Direct Debit SEPA for registered customers
+* Notify URL configuration in shop backend
+* Logo control has been implemented in global configuration
+* Responsive templates has been implemented
+* New booking with payment reference
+* Compatibility has been checked for subscription version 1.5.29 and 2.0.8
