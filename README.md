@@ -75,7 +75,7 @@ Follow these steps to install the WooCommerce payment plugin by Novalnet:
 4. Enable & activate the preferred payment types in your shop admin panel
 
 ## Documentation
-Find more about WooCommerce plugin in: [https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.1_woocommerce_4.0.0-9.9.5_woo-subscription_2.0.0-7.6.0_novalnet_12.8.4.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.1_woocommerce_4.0.0-9.9.5_woo-subscription_2.0.0-7.6.0_novalnet_12.8.4.pdf)<br>
+Find more about WooCommerce plugin in: [https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.2_woocommerce_4.0.0-10.0.4_woo-subscription_2.0.0-7.7.0_novalnet_12.8.4.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.2_woocommerce_4.0.0-10.0.4_woo-subscription_2.0.0-7.7.0_novalnet_12.8.4.pdf)<br>
 
 ## License
 See our License Agreement at: https://www.novalnet.com/payment-plugins-free-license/
