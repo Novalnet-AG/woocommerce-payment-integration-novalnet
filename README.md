@@ -3,7 +3,7 @@ Novalnet payment plugin for WooCommerce simplifies your daily work by automating
 
 ## WooCommerce Plugin Integration Requirements
 <a href="https://www.novalnet.de/">Novalnet</a> merchant account is 
-required for processing all international and local payments through this WooCommerce payment plugin. The plugin is available for WordPress versions 5.0 to 6.8.3, WooCommerce versions 4.0.0 to 10.2.2, and WooCommerce subscription versions 2.0.0 to 7.9.0 in the following languages: EN & DE.
+required for processing all international and local payments through this WooCommerce payment plugin. The plugin is available for WordPress versions 5.0 to 6.8.3, WooCommerce versions 4.0.0 to 10.3.4, and WooCommerce subscription versions 2.0.0 to 8.0.0 in the following languages: EN & DE.
 
 ## Key Features
 * Easy configuration of all international & local payment methods
@@ -73,7 +73,7 @@ Follow these steps to install the WooCommerce payment plugin by Novalnet:
 4. Enable & activate the preferred payment types in your shop admin panel
 
 ## Documentation
-Find more about WooCommerce plugin in: [https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.3_woocommerce_4.0.0-10.2.2_woo-subscription_2.0.0-7.9.0_novalnet_12.10.0.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.3_woocommerce_4.0.0-10.2.2_woo-subscription_2.0.0-7.9.0_novalnet_12.10.0.pdf)<br>
+Find more about WooCommerce plugin in: [https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.3_woocommerce_4.0.0-10.3.4_woo-subscription_2.0.0-8.0.0_novalnet_12.10.0.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-6.8.3_woocommerce_4.0.0-10.3.4_woo-subscription_2.0.0-8.0.0_novalnet_12.10.0.pdf)<br>
 
 ## License
 See our License Agreement at: https://www.novalnet.com/payment-plugins-free-license/
