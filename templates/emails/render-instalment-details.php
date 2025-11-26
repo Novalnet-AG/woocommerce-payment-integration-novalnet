@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $text_align = is_rtl() ? 'right' : 'left';?>
 
 <h2>
-	<?php wp_kses_post( __( 'Instalment Summary', 'woocommerce-novalnet-gateway' ) ); ?>
+	<?php echo wp_kses_post( __( 'Instalment Summary', 'woocommerce-novalnet-gateway' ) ); ?>
 </h2>
 
 <div style="margin-bottom: 40px;">
