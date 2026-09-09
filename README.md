@@ -74,7 +74,7 @@ Follow these steps to install the WooCommerce payment plugin by Novalnet:
 
 ## Documentation
 Find more about WooCommerce plugin in: 
-[https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-7.0_woocommerce_4.0.0-10.9.1_woo-subscription_2.0.0-9.0.0_novalnet_12.10.4.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-7.0_woocommerce_4.0.0-10.9.1_woo-subscription_2.0.0-9.0.0_novalnet_12.10.4.pdf)<br>
+[https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-7.1_woocommerce_4.0.0-11.0.1_woo-subscription_2.0.0-9.1.0_novalnet_12.10.4.pdf](https://www.novalnet.de/site_pdf/Installation_Guide-wordpress_5.0-7.1_woocommerce_4.0.0-11.0.1_woo-subscription_2.0.0-9.1.0_novalnet_12.10.4.pdf)<br>
 
 ## License
 See our License Agreement at: https://www.novalnet.com/payment-plugins-free-license/
