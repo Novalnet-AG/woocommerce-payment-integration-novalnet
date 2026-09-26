@@ -1,6 +1,6 @@
 *** Changelog ***
 
-= 12.10.5   - 2026.09.25 =
+= 12.10.5   - 2026.09.26 =
 * [Enhanced] Strengthened webhook checksum validation to improve webhook integrity and authenticity
 
 = 12.10.4   - 2026.06.26 =
