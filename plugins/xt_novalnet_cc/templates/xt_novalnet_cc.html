@@ -1,0 +1,188 @@
+<div class="item item-{$payment_code}{if !empty($payment_selected) && $payment_code == $payment_selected} selected{/if}">
+
+    {if $payment_logo == 'true'}
+        <a title="{$payment_name}" alt="{$payment_name}" target="_blank" >
+            {if $maestro_logo == 'true'}
+                <img src="plugins/xt_novalnet_cc/images/xt_novalnet_cc_maestro.png" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right"/>
+            {/if}
+            {if $amex_logo == 'true'}
+                <img src="plugins/xt_novalnet_cc/images/xt_novalnet_cc_amex.png" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right"/>
+            {/if}
+            <img src="{$payment_logo_src}" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right"/>
+        </a>
+    {/if}
+
+    <header data-toggle="collapse" data-target=".item-{$payment_code} .collapse">
+        <label class="cursor-pointer">
+            <span class="check">
+                {if !empty($payment_hidden)}
+                    {form type=hidden name=selected_payment value=$payment_code}
+                {else}
+                    {(!empty($payment_selected) && $payment_code == $payment_selected) ? {form type=radio name=selected_payment value=$payment_code checked=true} : {form type=radio name=selected_payment value=$payment_code}}
+                {/if}
+            </span>
+            <span class="name payment-name">
+                {$payment_name}
+            </span>
+            {if !empty($payment_price.formated)}
+                <small class="price">
+                    &nbsp;{$payment_price.formated}
+                </small>
+            {/if}
+        </label>
+    </header>
+
+     <div class="desc collapse {if !empty($payment_selected) && $payment_code == $payment_selected} in{/if} payment-desc">
+
+        {if !empty($payment_desc)}
+            <p>
+                {$payment_desc}
+            </p>
+        {/if}
+
+        {if $test_mode == 'true'}
+            <p style="color:red">
+                {txt key=XT_NOVALNET_TEST_MODE_NOTIFICATION_TEXT}
+            </p>
+        {/if}
+
+        {if !empty($user_info)}
+            <p>
+                {$user_info}
+            </p>
+        {/if}
+
+        {if ! empty($zero_amount_process_enabled)}
+            <p>
+                {txt key=XT_NOVALNET_ZERO_AMOUNT_ALERT_TEXT}
+            </p>
+        {/if}
+
+        <link rel="stylesheet" href="{$css_path}">
+        <script type="text/javascript" integrity="sha384-LQQRrIMtQAWtwTi9e6IauHXXydksI4z0p2WFIBpSdpWHC2cI8SafOA/K1A07v9+W"  src="{$js_path}"></script>
+        <script type="text/javascript" src="{$checkout_js_url}"></script>
+        <fieldset>
+            {if !empty($one_click_process_enabled)}
+
+                <!-- Given card details block -->
+                <div id="nn_given_card_div" style={$given_details_style}>
+                    <a class ="button" id="nn_new_card_link" style="cursor: pointer;">
+                        {txt key= XT_NOVALNET_NEW_CARD_TEXT}
+                    </a>
+                    <div class="form-group">
+                        <label for="mask_novalnet_cc_card_type">
+                            {txt key=XT_NOVALNET_CC_TYPE_TEXT}
+                        </label><br/>
+                        <span id='mask_novalnet_cc_card_type'>
+                            {$user_masked_data.cc_card_type}
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mask_novalnet_cc_holder">
+                            {txt key=XT_NOVALNET_CC_HOLDER_TEXT}
+                        </label><br/>
+                        <span id='mask_novalnet_cc_holder'>
+                            {$user_masked_data.cc_holder}
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mask_novalnet_cc_card_number">
+                            {txt key=XT_NOVALNET_CC_CARD_NO_TEXT}
+                        </label><br/>
+                        <span id='mask_novalnet_cc_card_number'>
+                            {$user_masked_data.cc_no}
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mask_novalnet_cc_expiry_date">
+                            {txt key=XT_NOVALNET_CC_EXP_DATE_TEXT}
+                        </label><br/>
+                        <span id='mask_novalnet_cc_expiry_date'>
+                            {$user_masked_data.cc_exp_month}/{$user_masked_data.cc_exp_year}
+                        </span>
+                    </div>
+                </div>
+            {/if}
+            <!-- New card details block -->
+            <div id="nn_new_card_div" style={$new_details_style}>
+                
+                {if ! empty($one_click_enabled_desc)}
+                    <p>
+                        {txt key=XT_NOVALNET_ONECLICK_TEXT_CC_DESC}
+                    </p>
+                {/if}
+                
+                {if !empty($one_click_process_enabled)}
+                    <a class ="button" id="nn_given_card_link" style="cursor: pointer;">
+                        {txt key= XT_NOVALNET_GIVEN_CARD_TEXT}
+                    </a>
+                {/if}
+                
+                <!-- Add iframe -->
+                <iframe frameBorder="0" id="xt_novalnet_cc_iframe" width="100%"  scrolling="no"></iframe>
+
+                <!-- Hidden fields block -->
+                {form type=hidden id=xt_novalnet_cc_server_error_message name=xt_novalnet_cc_server_error_message value=''}
+                {form type=hidden id=cc_pan_hash name=cc_pan_hash value=''}
+                {form type=hidden id=nn_unique_id name=nn_unique_id value=''}
+                {form type=hidden id=nn_cc_do_redirect name=nn_cc_do_redirect value=''}
+                {form type=hidden id=nn_standard_label value=$nn_standard_label}
+                {form type=hidden id=nn_standard_input value=$nn_standard_input}
+                {form type=hidden id=nn_standard_css value=$nn_standard_css}
+                {form type=hidden id=nn_card_details_error_text value=$nn_card_details_error_text}
+                
+                {form type=hidden id=nn_card_holder_text value={txt key= XT_NOVALNET_CC_HOLDER_TEXT}}
+                {form type=hidden id=nn_card_holder_input value={txt key= XT_NOVALNET_CC_HOLDER_INPUT_TEXT}}
+                
+                {form type=hidden id=nn_card_no_text value={txt key= XT_NOVALNET_CC_CARD_NO_TEXT}}
+                {form type=hidden id=nn_card_no_input value={txt key= XT_NOVALNET_CC_CARD_NO_INPUT_TEXT}}
+                
+                {form type=hidden id=nn_card_exp_date_text value={txt key= XT_NOVALNET_CC_EXP_DATE_TEXT}}
+                {form type=hidden id=nn_card_exp_date_input value={txt key= XT_NOVALNET_CC_EXP_DATE_INPUT_TEXT}}
+                
+                {form type=hidden id=nn_card_cvc_text value={txt key= XT_NOVALNET_CC_CVC_TEXT}}
+                {form type=hidden id=nn_card_cvc_input value={txt key= XT_NOVALNET_CC_CVC_INPUT_TEXT}}
+                
+                {form type=hidden id=nn_card_cvc_hint_text value={txt key= XT_NOVALNET_CC_CVC_HINT_TEXT}}
+                {form type=hidden id=nn_card_error_text value={txt key= XT_NOVALNET_CARD_DETAILS_INVALID_TEXT}}
+
+				{form type=hidden id=nn_card_name_error_text value={txt key= XT_NOVALNET_CC_CARD_NAME_ERROR_TEXT}}
+                {form type=hidden id=nn_card_no_error_text value={txt key= XT_NOVALNET_CC_CARD_NO_ERROR_TEXT}}
+                {form type=hidden id=nn_card_month_year_error_text value={txt key= XT_NOVALNET_CC_CARD_MONTH_YEAR_ERROR_TEXT}}
+                {form type=hidden id=nn_card_cvv_error_text value={txt key= XT_NOVALNET_CC_CARD_CVV_ERROR_TEXT}}
+
+                {form type=hidden id=shop_lang name=shop_lang value=$shop_lang}
+                {form type=hidden id=nn_card_holder_name name=nn_card_holder_name value=$card_holder_name}
+                {form type=hidden id=nn_client_key name=nn_client_key value=$nn_client_key}
+                {form type=hidden id=shop_currency name=shop_currency value=$shop_currency}
+                {form type=hidden id=transaction_amount name=transaction_amount value=$transaction_amount}
+                {form type=hidden id=nn_test_mode name=nn_test_mode value=$nn_test_mode}
+                
+                {form type=hidden id=nn_first_name name=nn_first_name value=$nn_first_name}
+                {form type=hidden id=nn_last_name name=nn_last_name value=$nn_last_name}
+                {form type=hidden id=nn_email name=nn_email value=$nn_email}
+                
+                {form type=hidden id=nn_billing_street name=nn_billing_street value=$nn_billing_street}
+                {form type=hidden id=nn_billing_city name=nn_billing_city value=$nn_billing_city}
+                {form type=hidden id=nn_billing_zip name=nn_billing_zip value=$nn_billing_zip}
+                {form type=hidden id=nn_billing_country_code name=nn_billing_country_code value=$nn_billing_country_code}
+                
+                {form type=hidden id=nn_same_as_billing name=nn_same_as_billing value=$nn_same_as_billing}
+                
+                {form type=hidden id=nn_shipping_first_name name=nn_shipping_first_name value=$nn_shipping_first_name}
+                {form type=hidden id=nn_shipping_last_name name=nn_shipping_last_name value=$nn_shipping_last_name}
+                {form type=hidden id=nn_shipping_enail name=nn_shipping_enail value=$nn_shipping_enail}
+                {form type=hidden id=nn_shipping_street name=nn_shipping_street value=$nn_shipping_street}
+                {form type=hidden id=nn_shipping_city name=nn_shipping_city value=$nn_shipping_city}
+                {form type=hidden id=nn_shipping_zip name=nn_shipping_zip value=$nn_shipping_zip}
+                {form type=hidden id=nn_shipping_country_code name=nn_shipping_country_code value=$nn_shipping_country_code}
+                
+            </div>
+            {if !empty($one_click_process_enabled)}
+                {form type=hidden id=xt_novalnet_cc_one_click_process name=xt_novalnet_cc_one_click_process value=$one_click_process_enabled}
+            {else}
+                {form type=hidden id=xt_novalnet_cc_one_click_process name=xt_novalnet_cc_one_click_process}
+            {/if}
+        </fieldset>
+    </div>
+</div>

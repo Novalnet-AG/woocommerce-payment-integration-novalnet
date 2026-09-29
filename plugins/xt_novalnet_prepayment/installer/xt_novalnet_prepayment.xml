@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf8"?>
+<xtcommerceplugin>
+    <title>Novalnet Prepayment (Novalnet Vorkasse)</title>
+    <version>11.6.0</version>
+    <code>xt_novalnet_prepayment</code>
+    <url>https://www.novalnet.de</url>
+    <description>Novalnet Vorkasse</description>
+    <icon>xt_novalnet_prepayment.png</icon>
+    <developer>Novalnet</developer>
+    <type>payment</type>
+    <payment>
+        <payment_code>xt_novalnet_prepayment</payment_code>
+        <payment_dir>xt_novalnet_prepayment</payment_dir>
+        <payment_icon>xt_novalnet_prepayment.png</payment_icon>
+        <payment_tpl>xt_novalnet_prepayment.html</payment_tpl>
+        <de>
+            <title>Vorkasse</title>
+            <description>Sie erhalten eine E-Mail mit den Bankdaten von Novalnet, um die Zahlung abzuschließen</description>
+        </de>
+        <en>
+            <title>Prepayment</title>
+            <description><![CDATA[You will receive an e-mail with the Novalnet account details to complete the payment]]></description>
+        </en>
+    </payment>
+    <db_install>
+        <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_prepayment/hooks/db_install.php');]]>
+    </db_install>
+    <plugin_code>
+        <code>
+            <hook>module_checkout.php:checkout_proccess_order_processed</hook>
+            <phpcode><![CDATA[
+                 include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_process.php');
+                ]]></phpcode>
+            <order>0</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_selections</hook>
+            <phpcode>
+                <![CDATA[
+                include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_selection.php');
+            ]]>
+            </phpcode>
+            <order>1</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>class.payment.php:_set_bottom</hook>
+            <phpcode>
+                <![CDATA[
+                include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_admin_post_validation.php';
+                ]]>
+            </phpcode>
+            <order>3</order>
+            <active>1</active>
+        </code>
+    </plugin_code>
+    <configuration_payment>
+        <config>
+            <key>TEST_MODE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>1</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Testmodus aktivieren</title>
+                <description>Die Zahlung wird im Testmodus durchgeführt, daher wird der Betrag für diese Transaktion nicht eingezogen.</description>
+            </de>
+            <en>
+                <title>Enable test mode</title>
+                <description>The payment will be processed in the test mode therefore amount for this transaction will not be charged</description>
+            </en>
+        </config>
+        <config>
+            <key>PREPAYMENT_DUE_DATE</key>
+            <type>textfield</type>
+            <value></value>
+            <order>2</order>
+            <de>
+                <title>Fälligkeitsdatum (in Tagen)</title>
+                <description>Anzahl der Tage, die der Käufer Zeit hat, um den Betrag an Novalnet zu überweisen (muss zwischen 7 und 28 Tagen liegen). Wenn Sie dieses Feld leer lassen, werden standardmäßig 14 Tage als Fälligkeitsdatum festgelegt.</description>
+            </de>
+            <en>
+                <title>Payment due date (in days)</title>
+                <description>Number of days given to the buyer to transfer the amount to Novalnet (must be between 7 and 28 days). If this field is left blank, 14 days will be set as due date by default.</description>
+            </en>
+        </config>
+        <config>
+            <key>ORDER_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>3</order>
+            <value>62</value>
+            <de>
+                <title>Status für erfolgreichen Auftragsabschluss</title>
+            </de>
+            <en>
+                <title>Completed order status</title>
+            </en>
+        </config>
+        <config>
+            <key>CALLBACK_ORDER_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>4</order>
+            <value>23</value>
+            <de>
+                <title>Callback-Bestellstatus</title>
+            </de>
+            <en>
+                <title>Callback order status</title>
+            </en>
+        </config>
+        <config>
+            <key>INFORMATION_TO_USER</key>
+            <type>textfield</type>
+            <value></value>
+            <order>5</order>
+            <de>
+                <title>Benachrichtigung des Käufers</title>
+                <description>Der eingegebene Text wird auf der Checkout-Seite angezeigt.</description>
+            </de>
+            <en>
+                <title>Notification for the buyer</title>
+                <description>The entered text will be displayed on the checkout page</description>
+            </en>
+        </config>
+    </configuration_payment>
+</xtcommerceplugin>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+    <language_content>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_DUEDATE_ERROR_TEXT</key>
+            <class>both</class>
+            <de>
+                <value>SEPA Fälligkeitsdatum Ungültiger</value>
+            </de>
+            <en>
+                <value>SEPA Due date is not valid</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_NONE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Keiner</value>
+            </de>
+            <en>
+              <value>None</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_SHOPTYPE_SELECT_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Einkaufstyp auswählen</value>
+            </de>
+            <en>
+              <value>Select shopping type</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_ONECLICK_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Kauf mit einem Klick</value>
+            </de>
+            <en>
+              <value>One-click shopping</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_ZEROAMOUNT_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Transaktionen mit Betrag 0</value>
+            </de>
+            <en>
+              <value>Zero amount booking</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_AMOUNT_INVALID_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Ungültiger Betrag</value>
+            </de>
+            <en>
+                <value>The amount is invalid</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_GUARANTEE_MIN_ERROR_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Der Mindestbetrag sollte bei mindestens 9,99 EUR</value>
+            </de>
+            <en>
+                <value>The minimum amount should be at least 9,99 EUR</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_PAYMENT_GUARANTEE_TITLE</key>
+            <class>admin</class>
+            <de>
+                <value><![CDATA[<br /><b>Einstellungen für die Zahlungsgarantie</b><br />]]></value>
+            </de>
+            <en>
+              <value><![CDATA[ <br /><b>Payment guarantee configuration</b><br/>]]></value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_PAYMENT_GUARANTEE_HINT</key>
+            <class>admin</class>
+            <de>
+                <value><![CDATA[<br /> <b>Grundanforderungen für die Zahlungsgarantie</b><ol><li>Zugelassene Staaten: DE, AT, CH</li><li>Zugelassene Währung: EUR</li><li>Mindestbetrag der Bestellung: 9,99 EUR</li><li>Mindestalter: 18 Jahre</li><li>Rechnungsadresse und Lieferadresse müssen übereinstimmen</li></ol><br />]]></value>
+            </de>
+            <en>
+              <value><![CDATA[<br /> <b>Basic requirements for payment guarantee</b><ol><li>Allowed countries: DE, AT, CH</li><li>Allowed currency: EUR</li><li>Minimum order amount: 9,99 EUR or more</li><li>Age limit: 18 years or more</li><li>The billing address must be the same as the shipping address</li></ol><br />]]></value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_INVALID_ACCOUNT_DETAILS_ERROR_TEXT</key>
+            <class>both</class>
+            <de>
+                <value>Ihre Kontodaten sind ungültig</value>
+            </de>
+            <en>
+              <value>Your account details are invalid</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_CAPTURE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung einziehen</value>
+            </de>
+            <en>
+                <value>Capture</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_AUTHORIZE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung autorisieren</value>
+            </de>
+            <en>
+                <value>Authorize</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_SEPA_DOB_TEXT</key>
+            <class>both</class>
+            <de>
+                <value>(TT.MM.JJJJ)</value>
+            </de>
+            <en>
+                <value>(DD.MM.YYYY)</value>
+            </en>
+        </phrase>
+    </language_content>
+</xtcommerceplugin>

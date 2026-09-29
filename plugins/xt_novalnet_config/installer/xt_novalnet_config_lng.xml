@@ -1,0 +1,1576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+  <language_content>
+    <phrase>
+      <key>TEXT_NOVALNET</key>
+      <class>both</class>
+      <de>
+        <value>Novalnet</value>
+      </de>
+      <en>
+        <value>Novalnet</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_NONE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Keiner</value>
+      </de>
+      <en>
+        <value>None</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SHOPTYPE_SELECT_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Einkaufstyp auswählen</value>
+      </de>
+      <en>
+        <value>Select shopping type</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ONECLICK_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Kauf mit einem Klick</value>
+      </de>
+      <en>
+        <value>One-click shopping</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ZEROAMOUNT_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Transaktionen mit Betrag 0</value>
+      </de>
+      <en>
+        <value>Zero amount booking</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BOOK_AMOUNT_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Buchungsbetrag der Transaktion<![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></value>
+      </de>
+      <en>
+        <value>Transaction booking amount<![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_BOOK_PROCESS</key>
+      <class>admin</class>
+      <de>
+        <value>Transaktion durchführen</value>
+      </de>
+      <en>
+        <value>Book transaction</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BOOK_BUTTON_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Buchen</value>
+      </de>
+      <en>
+        <value>Book</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BOOK_AMOUNT_SUCCESS_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Ihre Bestellung wurde mit einem Betrag von %s gebucht. Ihre neue TID für den gebuchten Betrag:%s</value>
+      </de>
+      <en>
+        <value> Your order has been booked with the amount of %s. Your new TID for the booked amount:%s </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MENTION_PAYMENT_CATEGORY_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Diese Transaktion wird mit Zahlungsgarantie verarbeitet</value>
+      </de>
+      <en>
+        <value>This is processed as a guarantee payment</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_DETAILS_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Novalnet-Transaktionsdetails</value>
+      </de>
+      <en>
+        <value>Novalnet transaction details</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_ID_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Novalnet Transaktions-ID</value>
+      </de>
+      <en>
+        <value>Novalnet transaction ID</value>
+      </en>
+    </phrase>
+
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_INFORMATION_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Zusammenfassung der Ratenzahlung</value>
+      </de>
+      <en>
+        <value>Instalment Summary</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_PROCESSED_INSTALMENTS</key>
+      <class>both</class>
+      <de>
+        <value>Bezahlte Raten: </value>
+      </de>
+      <en>
+        <value>Processed Instalments: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_DUE_INSTALMENTS</key>
+      <class>both</class>
+      <de>
+        <value>Offene Raten: </value>
+      </de>
+      <en>
+        <value>Due Instalments: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CYCLE_INSTALMENT_AMOUNT</key>
+      <class>both</class>
+      <de>
+        <value>Zyklus Betrag: </value>
+      </de>
+      <en>
+        <value>Cycle Amount: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_NEXT_INSTALMENT_DATE</key>
+      <class>both</class>
+      <de>
+        <value>Nächste Rate fällig am: </value>
+      </de>
+      <en>
+        <value>Next Instalment Date: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SELECT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>--Auswählen--</value>
+      </de>
+      <en>
+        <value>--Select--</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CONFIRM_BUTTON_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Bestätigen</value>
+      </de>
+      <en>
+        <value>Confirm</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_UNKNOWN_MESSAGE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Zahlung war nicht erfolgreich. Ein Fehler trat auf.</value>
+      </de>
+      <en>
+        <value>Payment was not successful. An error occurred.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MANAGE_TRANSACTION_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Ablauf der Buchung steuern</value>
+      </de>
+      <en>
+        <value>Manage transaction process</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_UPDATE_BUTTON_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ändern</value>
+      </de>
+      <en>
+        <value>Update</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CANCEL_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Stornieren</value>
+      </de>
+      <en>
+        <value>Cancel</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SELECT_STATUS_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Wählen Sie bitte einen Status aus</value>
+      </de>
+      <en>
+        <value>Please select status</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_CONFIRM_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die Buchung wurde am %s um %s Uhr bestätigt.</value>
+      </de>
+      <en>
+        <value>The transaction has been confirmed on %s , %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_CONFIRM_INVOICE_MESSAGE</key>
+      <class>admin</class>
+      <de>
+        <value>Die Buchung wurde am %s Uhr bestätigt.</value>
+      </de>
+      <en>
+        <value>The transaction has been confirmed on %s , %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_INVOICE_QR_MESSAGE</key>
+      <class>both</class>
+      <de>
+        <value>Alternativ können Sie auch den nachstehenden QR-Code verwenden, um die Zahlung zu erleichtern. Bitte scannen Sie ihn mit Ihrer Banking-App, um die Zahlung abzuschließen.</value>
+      </de>
+      <en>
+        <value>Alternatively, you can use the QR code below for your convenience. Please scan it with your banking app to complete the payment.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_CANCEL_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die Transaktion wurde am %s um %s Uhr storniert</value>
+      </de>
+      <en>
+        <value>The transaction has been canceled on %s , %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_AMOUNT_UPDATE_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die Transaktion wurde mit dem Betrag %s auf %s %s gesetzt.</value>
+      </de>
+      <en>
+        <value>The transaction has been updated with amount %s on %s, %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSACTION_AMOUNT_UPDATE_WITH_DUE_DATE_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die Transaktion wurde mit dem Betrag %s und dem Fälligkeitsdatum %s aktualisiert.</value>
+      </de>
+      <en>
+        <value>The transaction has been updated with amount %s and due date with %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_PROCESS_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Ablauf der Rückerstattung</value>
+      </de>
+      <en>
+        <value>Refund process</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_AMOUNT_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Geben Sie bitte den erstatteten Betrag ein<![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></value>
+      </de>
+      <en>
+        <value>Please enter the refund amount<![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_REFERENCE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Referenz zur Rückerstattung</value>
+      </de>
+      <en>
+        <value>Refund reference</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_INVALID_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ungültiger Betrag</value>
+      </de>
+      <en>
+        <value>The amount is invalid</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_SUCCESS_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die Rückerstattung für die TID: %s mit dem Betrag %s wurde veranlasst.</value>
+      </de>
+      <en>
+        <value>Refund has been initiated for the TID: %s with the amount of %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_NEW_TID_MESSAGE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Die neue TID für den erstatteten Betrag lautet: %s</value>
+      </de>
+      <en>
+        <value>New TID: %s for the refunded amount</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SERVER_ADDRESS_CONFIG_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Sie müssen die IP-Adresse Ihres Outgoing-Servers ( %s ) bei Novalnet hinterlegen. Bitte hinterlegen Sie diese im Novalnet-Administrationsportal oder kontaktieren Sie uns unter technic@novalnet.de</value>
+      </de>
+      <en>
+        <value>You need to configure your outgoing server IP address ( %s ) at Novalnet. Please configure it in Novalnet admin portal or contact technic@novalnet.de</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_URL_LINK</key>
+      <class>store</class>
+      <de>
+        <value>https://www.novalnet.de/</value>
+      </de>
+      <en>
+        <value>https://www.novalnet.com/</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TEST_MODE_NOTIFICATION_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Die Zahlung wird im Testmodus durchgeführt, daher wird der Betrag für diese Transaktion nicht eingezogen.</value>
+      </de>
+      <en>
+        <value>The payment will be processed in the test mode therefore amount for this transaction will not be charged.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ZERO_AMOUNT_ALERT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Diese Bestellung wird als Nullbuchung verarbeitet. Ihre Zahlungsdaten werden für zukünftige Online-Einkäufe gespeichert.</value>
+      </de>
+      <en>
+        <value>This order will be processed as zero amount booking which store your payment data for further online purchases.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ZERO_AMOUNT_BOOKING_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Diese Transaktion wird mit Nullbuchung bearbeitet</value>
+      </de>
+      <en>
+        <value>This order processed as a zero amount booking</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_UPDATE_FIELD_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Betrag der Transaktion ändern<![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></value>
+      </de>
+      <en>
+        <value>Update Transaction Amount<![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_DUEDATE_UPDATE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Betrag / Fälligkeitsdatum ändern</value>
+      </de>
+      <en>
+        <value>Change the amount / due date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_UPDATE_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Betrag ändern</value>
+      </de>
+      <en>
+        <value>Amount update</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DUE_DATE_FIELD_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Fälligkeitsdatum der Transaktion</value>
+      </de>
+      <en>
+        <value>Transaction due date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_NOTIFY_CUSTOMER_ERROR_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ungültige Feldbenachrichtigung für den Käufer</value>
+      </de>
+      <en>
+        <value>Invalid Field Notification for the buyer</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DUEDATE_ERROR_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Das Datum sollte in der Zukunft liegen</value>
+      </de>
+      <en>
+        <value>The date should be in future</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DUEDATE_EMPTY_ERROR_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Geben Sie bitte ein gültiges Fälligkeitsdatum ein</value>
+      </de>
+      <en>
+        <value>Please enter valid due date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSFER_INFO_ONHOLD_MESSAGE</key>
+      <class>both</class>
+      <de>
+        <value>Bitte überweisen Sie den Betrag %s auf das unten stehende Konto</value>
+      </de>
+      <en>
+        <value>Please transfer the amount %s to the below mentioned account</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TRANSFER_INFO_NORMAL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Bitte überweisen Sie den Betrag von %s spätestens bis zum %s auf das folgende Konto</value>
+      </de>
+      <en>
+        <value>Please transfer the amount of %s to the following account on or before %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PAYMENT_ORDERNO_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Bestellnummer </value>
+      </de>
+      <en>
+        <value>Order number </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TESTBESTELLUNG_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Testbestellung</value>
+      </de>
+      <en>
+        <value>Test order</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DUE_DATE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Fälligkeitsdatum</value>
+      </de>
+      <en>
+        <value>Due date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ACCOUNT_HOLDER_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Kontoinhaber</value>
+      </de>
+      <en>
+        <value>Account holder</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_IBAN_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>IBAN</value>
+      </de>
+      <en>
+        <value>IBAN</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BIC_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>BIC</value>
+      </de>
+      <en>
+        <value>BIC</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BANK_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Bank</value>
+      </de>
+      <en>
+        <value>Bank</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BANK_PLACE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Stadt</value>
+      </de>
+      <en>
+        <value>City</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Betrag</value>
+      </de>
+      <en>
+        <value>Amount</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MULTI_PAYMENT_REFERENCE_NOTIFY_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Bitte verwenden Sie einen der unten angegebenen Verwendungszwecke für die Überweisung, da nur so Ihr Geldeingang zugeordnet werden kann:</value>
+      </de>
+      <en>
+        <value>Please use any one of the following references as the payment reference, as only through this way your payment is matched and assigned to the order:</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PAYMENT_TRANSACTION_REFERENCE_1</key>
+      <class>both</class>
+      <de>
+        <value>Verwendungszweck 1</value>
+      </de>
+      <en>
+        <value>Payment reference 1</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PAYMENT_TRANSACTION_REFERENCE_2</key>
+      <class>both</class>
+      <de>
+        <value>Verwendungszweck 2</value>
+      </de>
+      <en>
+        <value>Payment reference 2</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CHECK_HASH_FAILED_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Während der Umleitung wurden einige Daten geändert. Die Überprüfung des Hashes schlug fehl</value>
+      </de>
+      <en>
+        <value>While notifying some data has been changed. The hash check failed</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_GIVEN_CARD_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Eingegebene Kartendaten</value>
+      </de>
+      <en>
+        <value>Given card details</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ONECLICK_TEXT_CC_DESC</key>
+      <class>store</class>
+      <de>
+        <value>Ihre Kartendaten werden für spätere Käufe gespeichert</value>
+      </de>
+      <en>
+        <value>Your card details are saved for later purchases</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ONECLICK_TEXT_SEPA_DESC</key>
+      <class>store</class>
+      <de>
+        <value>Ihre Kontodaten werden für spätere Käufe gespeichert.</value>
+      </de>
+      <en>
+        <value>Your account details are saved for later purchases</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_NEW_CARD_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Neue Kartendaten eingeben</value>
+      </de>
+      <en>
+        <value>Enter new card details</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_GIVEN_ACCOUNT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Eingegebene Kontodaten</value>
+      </de>
+      <en>
+        <value>Given account details</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_NEW_ACCOUNT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Neue Kontodaten eingeben</value>
+      </de>
+      <en>
+        <value>Enter new account details</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DOB_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Geben Sie bitte Ihr Geburtsdatum ein</value>
+      </de>
+      <en>
+        <value>Please enter your date of birth</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_GUARANTEE_PAYMENT_PENDING_TO_HOLD_MESSAGE</key>
+      <class>both</class>
+      <de>
+        <value>Der Status der Transaktion mit der TID: %s wurde am %s um %s Uhr von ausstehend auf ausgesetzt geändert.</value>
+      </de>
+      <en>
+        <value>The transaction status has been changed from pending to on-hold for the TID: %s on %s %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_GUARANTEE_TRANS_CONFIRM_SUCCESSFUL_MESSAGE</key>
+      <class>both</class>
+      <de>
+        <value>Die Buchung wurde am %s um %s Uhr bestätigt.</value>
+      </de>
+      <en>
+        <value>The transaction has been confirmed on %s %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_GUARANTEE_TRANS_CANCEL_SUCCESSFUL_MESSAGE</key>
+      <class>both</class>
+      <de>
+        <value>Die Transaktion wurde am %s um %s Uhr storniert</value>
+      </de>
+      <en>
+        <value>The transaction has been canceled on %s %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_EXECUTED_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Gutschrift für die TID: %s in Höhe von %s wurde am %s %s.erfolgreich verbucht. Neue TID: %s für die Gutschrift.</value>
+      </de>
+      <en>
+        <value>Credit has been successfully received for the TID: %s with an amount of %s on %s %s. New TID: %s for the credit.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_EXECUTED_EXTRA_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Gutschrift für die TID: %s in Höhe von %s wurde am %s %s.erfolgreich verbucht. Neue TID: %s für die Gutschrift.</value>
+      </de>
+      <en>
+        <value>Credit has been successfully received for the TID: %s with an amount of %s on %s. New TID: %s for the credit.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_ZERO_LEVEL_EXECUTED_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Novalnet-Callback-Skript erfolgreich ausgeführt für die TID: %s mit dem Betrag %s am , um %s %s.</value>
+      </de>
+      <en>
+        <value>Novalnet Callback Script executed successfully for the TID: %s with amount %s on %s %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_CHARGEBACK_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Chargeback erfolgreich importiert für die TID: %s Betrag: %s am %s %s Uhr. TID der Folgebuchung: %s</value>
+      </de>
+      <en>
+        <value>Chargeback executed successfully for the TID: %s amount: %s on %s %s. The subsequent TID: %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_REVERSAL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Chargeback für Rücküberweisung mit dem Betrag am %s um %s %s für TID %s ausgeführt. Die neue TID lautet: %s</value>
+      </de>
+      <en>
+        <value>Chargeback executed for reversal of TID: %s with the amount %s on %s %s. The subsequent TID: %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_RETURN_DEBIT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Chargeback für Rücklastschrift mit dem Betrag am %s um %s %s für TID %s ausgeführt. Die neue TID lautet: %s</value>
+      </de>
+      <en>
+        <value>Chargeback executed for return debit of TID: %s with the amount %s on %s %s. The subsequent TID: %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_BOOKBACK_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Rückerstattung für die TID %s mit dem Betrag %s wurde veranlasst. Die neue TID: %s für den erstatteten Betrag</value>
+      </de>
+      <en>
+        <value>Refund has been initiated for the TID: %s with the amount of %s. New TID: %s for the refunded amount</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_SCRIPT_CANCEL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Transaktion wurde storniert. Grund:</value>
+      </de>
+      <en>
+        <value>The transaction has been canceled due to:</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_REFUND_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sicher, dass Sie den Betrag zurückerstatten möchten?</value>
+      </de>
+      <en>
+        <value>Are you sure you want to refund the amount?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ON_HOLD_CAPTURE_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sicher, dass Sie die Zahlung einziehen möchten?</value>
+      </de>
+      <en>
+        <value>Are you sure you want to capture the payment?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ON_HOLD_CANCEL_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sicher, dass Sie die Zahlung stornieren wollen?</value>
+      </de>
+      <en>
+        <value>Are you sure you want to cancel the payment?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_UPDATE_SEPA_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sich sicher, dass Sie den Bestellbetrag ändern wollen? </value>
+      </de>
+      <en>
+        <value>Are you sure you want to change the order amount?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_UPDATE_INV_PRE_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sich sicher, dass Sie den Betrag / das Fälligkeitsdatum der Bestellung ändern wollen? </value>
+      </de>
+      <en>
+        <value>Are you sure you want to change the order amount or due date?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ZERO_AMOUNT_BOOK_CONFIRM_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Sind Sie sich sicher, dass Sie den Bestellbetrag buchen wollen?</value>
+      </de>
+      <en>
+        <value>Are you sure you want to book the order amount?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CARD_DETAILS_INVALID_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Ihre Kreditkartendaten sind ungültig.</value>
+      </de>
+      <en>
+        <value>Your credit card details are invalid</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ENTER_DOB_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Geben Sie bitte Ihr Geburtsdatum ein</value>
+      </de>
+      <en>
+        <value>Please enter your date of birth</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ENTER_VALID_DOB_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Geben Sie ein gültiges Geburtsdatum ein</value>
+      </de>
+      <en>
+        <value>Please enter valid birth date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BELOW_DOB_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Sie müssen mindestens 18 Jahre alt sein.</value>
+      </de>
+      <en>
+        <value>You need to be at least 18 years old</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_AMOUNT_CHANGE_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Der Bestellbetrag hat sich geändert, setzen Sie bitte die neue Bestellung fort.</value>
+      </de>
+      <en>
+        <value>The order amount has been changed, please proceed with the new order</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TEST_ORDER_NOTIFICATION_SUBJECT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Benachrichtigung zu Novalnet-Testbestellung -</value>
+      </de>
+      <en>
+        <value>Novalnet test order notification -</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TEST_ORDER_NOTIFICATION_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Sehr geehrte Kundin,<![CDATA[<br /><br />wir möchten Sie darüber informieren, dass eine Testbestellung (%s) kürzlich in Ihrem Shop durchgeführt wurde. Stellen Sie bitte sicher, dass für Ihr Projekt im Novalnet-Administrationsportal der Live-Modus gesetzt wurde und Zahlungen über Novalnet in Ihrem Shopsystem aktiviert sind. Ignorieren Sie bitte diese E-Mail, falls die Bestellung von Ihnen zu Testzwecken durchgeführt wurde. <br /><br />Mit freundlichen Grüßen <br />Novalnet AG]]></value>
+      </de>
+      <en>
+        <value>Dear client,<![CDATA[<br /><br />We would like to inform you that test order (%s) has been placed in your shop recently.Please make sure your project is in LIVE mode at Novalnet administration portal and Novalnet payments are enabled in your shop system. Please ignore this email if the order has been placed by you for testing purpose. <br /><br />Regards, <br />Novalnet AG]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BASIC_GUARANTEE_REQUIREMENT_MISSING_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Die Zahlung kann nicht verarbeitet werden, da die grundlegenden Anforderungen für die Zahlungsgarantie nicht erfüllt wurden </value>
+      </de>
+      <en>
+        <value>The payment cannot be processed, because the basic requirements for the payment guarantee haven't been met </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BASIC_GUARANTEE_CURRENCY_INVALID_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>(Nur EUR Währung erlaubt)</value>
+      </de>
+      <en>
+        <value>(Only EUR currency allowed)</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BASIC_GUARANTEE_COUNTRY_MISMATCH_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>(Als Land ist nur Deutschland, Österreich oder Schweiz erlaubt)</value>
+      </de>
+      <en>
+        <value>(Only Germany, Austria or Switzerland are allowed)</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BASIC_GUARANTEE_ADDRESS_MISMATCH_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>(Die Lieferadresse muss mit der Rechnungsadresse identisch sein)</value>
+      </de>
+      <en>
+        <value>(The shipping address must be the same as the billing address)</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_BASIC_GUARANTEE_MINIMUM_AMOUNT_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>(Mindestbestellmenge sollte %s EUR sein)</value>
+      </de>
+      <en>
+        <value>(Minimum order amount should be %s EUR)</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MENTION_GUARANTEE_PENDING_PAYMENT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ihre Bestellung wird derzeit überprüft. Wir werden Sie in Kürze über den Bestellstatus informieren. Bitte beachten Sie, dass dies bis zu 24 Stunden dauern kann.</value>
+      </de>
+      <en>
+        <value>Your order is under verification and we will soon update you with the order status. Please note that this may take upto 24 hours.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MENTION_GUARANTEE_PENDING_SEPA_PAYMENT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ihre Bestellung wird derzeit überprüft. Wir werden Sie in Kürze über den Bestellstatus informieren. Bitte beachten Sie, dass dies bis zu 24 Stunden dauern kann.</value>
+      </de>
+      <en>
+        <value>Your order is under verification and we will soon update you with the order status. Please note that this may take upto 24 hours.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INVALID_DATE_FORMAT_ERROR_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Ungültiges Datumsformat</value>
+      </de>
+      <en>
+        <value>The date format is invalid</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ADMIN_PORTAL_LINK_TITLE</key>
+      <class>admin</class>
+      <de>
+        <value><![CDATA[<b>Um zusätzliche Einstellungen vorzunehmen, loggen Sie sich in das <a href=https://admin.novalnet.de target=_blank >Novalnet-Administrationsportal</a> ein. Um sich in das Portal einzuloggen, benötigen Sie einen Account bei Novalnet. Falls Sie diesen noch nicht haben, kontaktieren Sie bitte <a href=mailto:sales@novalnet.de>sales@novalnet.de</a> (Tel: +49 (089) 923068320) ]]></value>
+      </de>
+      <en>
+        <value><![CDATA[<b>For additional configurations login to <a href=https://admin.novalnet.de target=_blank >Novalnet Merchant Administration portal</a>. To login to the Portal you need to have an account at Novalnet. If you don&#39;t have one yet, please contact <a href=mailto:sales@novalnet.de>sales@novalnet.de</a> / tel. +49 (089) 923068320 ]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_LOGO_MANAGEMENT_TITLE</key>
+      <class>admin</class>
+      <de>
+        <value><![CDATA[<br /><br /> <b>Steuerung der angezeigten Logos</b> ]]></value>
+      </de>
+      <en>
+        <value><![CDATA[<br /><br /> <b>Logos display management </b> ]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ORDER_STATUS_MANAGEMENT_TITLE</key>
+      <class>admin</class>
+      <de>
+        <value><![CDATA[<br /><br /> <b>Verwaltung des Bestellstatus für ausgesetzte Zahlungen</b> ]]></value>
+      </de>
+      <en>
+        <value><![CDATA[<br /><br /> <b>Order status management for on-hold transactions</b> ]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MERCHANT_SCRIPT_MANAGEMENT_TITLE</key>
+      <class>admin</class>
+      <de>
+        <value><![CDATA[<br /><br /> <b>Benachrichtigungs- / Webhook-URL festlegen</b> ]]></value>
+      </de>
+      <en>
+        <value><![CDATA[<br /><br /> <b>Notification / Webhook URL Setup</b> ]]></value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_HOLDER_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Name des Karteninhabers</value>
+      </de>
+      <en>
+        <value>Card holder name</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_HOLDER_INPUT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Name auf der Kreditkarte</value>
+      </de>
+      <en>
+        <value>Name on card</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_TYPE_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Kartentyp</value>
+      </de>
+      <en>
+        <value>Type of card</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_CARD_NO_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Kreditkartennummer</value>
+      </de>
+      <en>
+        <value>Card number</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_CARD_NO_INPUT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>XXXX XXXX XXXX XXXX</value>
+      </de>
+      <en>
+        <value>XXXX XXXX XXXX XXXX</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_EXP_DATE_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Ablaufdatum</value>
+      </de>
+      <en>
+        <value>Expiry date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_EXP_DATE_INPUT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>MM / YYYY</value>
+      </de>
+      <en>
+        <value>MM / YYYY</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_CVC_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>CVC/CVV/CID</value>
+      </de>
+      <en>
+        <value>CVC/CVV/CID</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_CVC_INPUT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>XXX</value>
+      </de>
+      <en>
+        <value>XXX</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_CVC_HINT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Was ist das?</value>
+      </de>
+      <en>
+        <value>what is this?</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_HOLDER_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Kontoinhaber</value>
+      </de>
+      <en>
+        <value>Account holder</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_IBAN_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>IBAN</value>
+      </de>
+      <en>
+        <value>IBAN</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_MANDATE_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Ich erteile hiermit das SEPA-Lastschriftmandat (elektronische Übermittlung) und bestätige, dass die Bankverbindung korrekt ist.</value>
+      </de>
+      <en>
+        <value>I hereby grant the mandate for the SEPA direct debit (electronic transmission) and confirm that the given bank details are correct!</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT1</key>
+      <class>store</class>
+      <de>
+        <value>Ich ermächtige den Zahlungsempfänger, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich weise ich mein Kreditinstitut an, die von dem Zahlungsempfänger auf mein Konto gezogenen Lastschriften einzulösen.</value>
+      </de>
+      <en>
+        <value>I authorise (A) Novalnet AG to send instructions to my bank to debit my account and (B) my bank to debit my account in accordance with the instructions from Novalnet AG.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT2</key>
+      <class>store</class>
+      <de>
+        <value>Gläubiger-Identifikationsnummer: </value>
+      </de>
+      <en>
+        <value>Creditor identifier: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT3</key>
+      <class>store</class>
+      <de>
+        <value>Hinweis: </value>
+      </de>
+      <en>
+        <value>Note: </value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT4</key>
+      <class>store</class>
+      <de>
+        <value>Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen.</value>
+      </de>
+      <en>
+        <value>You are entitled to a refund from your bank under the terms and conditions of your agreement with bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_NEW_INSTALMENT_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Für die Transaktions-ID ist eine neue Rate eingegangen: %s . Die Transaktions-ID der neuen Rate lautet: %s mit Betrag %s am %s.</value>
+      </de>
+      <en>
+        <value>A new instalment transaction has been received for the Transaction ID: %s. The new instalment transaction ID is: %s with the amount %s on %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_DOB_FIELD_TEXT</key>
+      <class>store</class>
+      <de>
+        <value>Ihr Geburtsdatum</value>
+      </de>
+      <en>
+        <value>Your date of birth</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_MANDATORY_PARAMETER_MISSING_ERROR_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Füllen Sie bitte alle Pflichtfelder aus</value>
+      </de>
+      <en>
+        <value>Please fill in all the mandatory fields</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CALLBACK_URL_TITLE</key>
+      <class>admin</class>
+      <de>
+        <value>Benachrichtigungs- / Webhook-URL</value>
+      </de>
+      <en>
+        <value>Notification / Webhook URL</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PHP_CORE_ERROR_TEXT</key>
+      <class>admin</class>
+      <de>
+        <value>Erwähnt PHP-Paket (e) in diesem Server nicht verfügbar ist. Bitte aktivieren Sie sie.</value>
+      </de>
+      <en>
+        <value>Mentioned PHP Package(s) not available in this Server. Please enable it.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_CC_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Kredit- / Debitkarte</value>
+      </de>
+      <en>
+        <value>Credit/Debit Cards</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_SEPA_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Lastschrift SEPA</value>
+      </de>
+      <en>
+        <value>Direct Debit SEPA</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_IDEAL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>iDEAL | Wero</value>
+      </de>
+      <en>
+        <value>iDEAL | Wero</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PAYPAL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>PayPal</value>
+      </de>
+      <en>
+        <value>PayPal</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PREPAYMENT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Vorkasse</value>
+      </de>
+      <en>
+        <value>Prepayment</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INVOICE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Kauf auf Rechnung</value>
+      </de>
+      <en>
+        <value>Invoice</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_INVOICE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ratenzahlung per Rechnung</value>
+      </de>
+      <en>
+        <value>Instalment by Invoice</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CANCEL_REMAINING_CYCLES_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Ratenzahlung für die TID wurde gestoppt: %s um %s</value>
+      </de>
+      <en>
+        <value>Instalment has been stopped for the TID: %s on %s</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CANCEL_ALL_CYCLES_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Die Ratenzahlung für die TID wurde gekündigt: %s am %s.</value>
+      </de>
+      <en>
+        <value>Instalment has been cancelled for the TID: %s on %s.</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_SEPA_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Ratenzahlung per SEPA-Lastschrift</value>
+      </de>
+      <en>
+        <value>Instalment by Direct Debit SEPA</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_EPS_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>eps</value>
+      </de>
+      <en>
+        <value>eps</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_ONLINEBANKTRANSFER_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Onlineüberweisung</value>
+      </de>
+      <en>
+        <value>Online bank transfer</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_TWINT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>TWINT</value>
+      </de>
+      <en>
+        <value>TWINT</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_PRZELEWY24_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Przelewy24</value>
+      </de>
+      <en>
+        <value>Przelewy24</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_SNO_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>S.Nr</value>
+      </de>
+      <en>
+        <value>S.No</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_AMOUNT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Betrag</value>
+      </de>
+      <en>
+        <value>Amount</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_NEXT_DATE_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Nächste Rate fällig am</value>
+      </de>
+      <en>
+        <value>Next Instalment Date</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_ACTION_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Aktion</value>
+      </de>
+      <en>
+        <value>Action</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CANCEL_ALL_REMAINING_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Alle verbleibenden Raten stornieren</value>
+      </de>
+      <en>
+        <value>Cancel All Remaining Instalments</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CANCEL_ALL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Alle Raten stornieren</value>
+      </de>
+      <en>
+        <value>Cancel All Instalments</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_REFUND_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Rückerstattung</value>
+      </de>
+      <en>
+        <value>Refund</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CANCEL_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Stornieren</value>
+      </de>
+      <en>
+        <value>Cancel</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CONFIRM_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Bestätigen</value>
+      </de>
+      <en>
+        <value>Confirm</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_SUMMARY_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Zusammenfassung der Ratenzahlung</value>
+      </de>
+      <en>
+        <value>Instalment summary</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_PLAN_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Wählen Sie Ihren Ratenplan</value>
+      </de>
+      <en>
+        <value>Choose your instalment plan</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CYCLES_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>ANZAHL DER RATEN</value>
+      </de>
+      <en>
+        <value>INSTALMENT CYCLES</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_CYCLE_AMOUNT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>RATENBETRAG</value>
+      </de>
+      <en>
+        <value>INSTALMENT AMOUNT</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>Raten</value>
+      </de>
+      <en>
+        <value>Instalment</value>
+      </en>
+    </phrase>
+    <phrase>
+      <key>XT_NOVALNET_INSTALMENT_PER_MONTH_TEXT</key>
+      <class>both</class>
+      <de>
+        <value>pro Monat</value>
+      </de>
+      <en>
+        <value>per month</value>
+      </en>
+    </phrase>
+  </language_content>
+</xtcommerceplugin>

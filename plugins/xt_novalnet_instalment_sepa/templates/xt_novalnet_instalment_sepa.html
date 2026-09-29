@@ -1,0 +1,441 @@
+<div class="item item-{$payment_code}{if !empty($payment_selected) && $payment_code == $payment_selected} selected{/if}">
+  {if $payment_logo == 'true'}
+  <a title="{$payment_name}" alt="{$payment_name}" target="_new">
+    <img src="{$payment_logo_src}" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right" />
+  </a>
+  {/if}
+
+  <header data-toggle="collapse" data-target=".item-{$payment_code} .collapse">
+    <label class="cursor-pointer">
+      <span class="check">
+        {if !empty($payment_hidden)}
+        {form type=hidden name=selected_payment value=$payment_code}
+        {else}
+        {if !empty($payment_selected) && $payment_code == $payment_selected}
+        {form type=radio name=selected_payment value=$payment_code checked=true}
+        {else}
+        {form type=radio name=selected_payment value=$payment_code}
+        {/if}
+        {/if}
+      </span>
+      <input type="hidden" id="payment_code_sepa" value="{$payment_code}">
+      <span class="name payment-name">
+        {$payment_name}
+      </span>
+      {if !empty($payment_price.formated)}
+      <input type="hidden" id="instalment_sepa_payment_fee" value="{$payment_price.plain_otax|default:0}">
+      <small class="price">
+        &nbsp;{$payment_price.formated}
+      </small>
+      {/if}
+    </label>
+  </header>
+
+  <div class="desc collapse {if !empty($payment_selected) && $payment_code == $payment_selected} in{/if} payment-desc">
+    {if !empty($payment_desc)}
+    <p>
+      {$payment_desc}
+    </p>
+    {/if}
+
+    {if $test_mode == 'true'}
+    <p style="color:red">
+      {txt key=XT_NOVALNET_TEST_MODE_NOTIFICATION_TEXT}
+    </p>
+    {/if}
+
+    {if !empty($user_info)}
+    <p>
+      {$user_info}
+    </p>
+    {/if}
+    <fieldset>
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+      <script type="text/javascript" src="{$authorize_js_path}"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script type="text/javascript" src="https://cdn.novalnet.de/js/v2/NovalnetUtility.js"></script>
+      <script type="text/javascript" integrity="sha384-6v3h9dpCqNHo4aMUZHc9G03Y1gTYMYGI/+S65qUGHIrtJ2/71axYxCvr1ZQ7CFLK" src="{$js_path}"></script>
+      {if !empty($one_click_process_enabled)}
+
+      <!-- Given account details block -->
+      <div id="nn_instalment_sepa_given_account_div" style={$given_details_style}>
+        <a class="button" id="nn_instalment_sepa_new_account_link" style="cursor: pointer;">{txt key= XT_NOVALNET_NEW_ACCOUNT_TEXT}</a>
+        <div class="form-group">
+          <label for="mask_novalnet_instalment_sepa_account_holder">
+            {txt key=XT_NOVALNET_SEPA_HOLDER_TEXT}
+          </label><br />
+          <span id='mask_novalnet_instalment_sepa_account_holder'>
+            {$user_masked_data.bankaccount_holder}
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="mask_novalnet_instalment_sepa_iban">
+            IBAN
+          </label><br />
+          <span id='mask_novalnet_instalment_sepa_iban'>
+            {$user_masked_data.iban}
+          </span>
+        </div>
+      </div>
+      {/if}
+
+      <!-- New account details block -->
+      <div id="nn_instalment_sepa_new_account_div" style={$new_details_style}>
+        {if !empty($one_click_enabled_desc)}
+        <p>
+          {txt key=XT_NOVALNET_ONECLICK_TEXT_INSTALMENT_SEPA_DESC}
+        </p>
+        {/if}
+
+        {if !empty($one_click_process_enabled)}
+        <a class="button" id="nn_instalment_sepa_given_account_link" style="cursor: pointer;">
+          {txt key= XT_NOVALNET_GIVEN_ACCOUNT_TEXT}
+        </a>
+        {/if}
+
+        <div class="form-group">
+          <label for="novalnet_instalment_sepa_account_holder">
+            {txt key=XT_NOVALNET_SEPA_HOLDER_TEXT}*
+          </label>
+          {form type=text name=novalnet_instalment_sepa_account_holder id=novalnet_instalment_sepa_account_holder value=$account_holder params='autocomplete=off' onkeypress="return novalnet_instalment_sepa_validation(event,'alpha')"}
+        </div>
+        <div class="form-group">
+          <label for="novalnet_instalment_sepa_iban">
+            {txt key=XT_NOVALNET_SEPA_IBAN_TEXT}*
+          </label>
+          {form type=text name=novalnet_instalment_sepa_iban id=novalnet_instalment_sepa_iban placeholder='DE00 0000 0000 0000 0000 00' value='' params='autocomplete=off' style="text-transform: uppercase;" onkeypress="return novalnet_instalment_sepa_validation(event,'alphaNum')"}
+        </div>
+        <div class="form-group" id="nn_instalment_sepa_bic" style="display: none;">
+          <label for="novalnet_instalment_sepa_bic">
+            {txt key=XT_NOVALNET_BIC_TEXT}*
+          </label>
+          {form type=text name=novalnet_instalment_sepa_bic id=novalnet_instalment_sepa_bic placeholder='XXXX XX XX XXX' value='' params='autocomplete=off'
+          style="text-transform: uppercase;" onkeypress="return novalnet_instalment_sepa_validation(event,'alphaNum')"}
+        </div>
+        <a id="novalnet-instalment-sepa-mandate" style="color:white;cursor:pointer;text-decoration:none;" onclick="return novalnet_instalment_sepa.sepa_instalment_mandate_toggle_process()">
+          <span id="novalnet_instalment_sepa_mandate_text">
+            <strong>
+              {txt key=XT_NOVALNET_SEPA_MANDATE_TEXT}
+            </strong>
+          </span>
+        </a>
+        <div style="display:none;background-color: #3d9cd2;padding: 1em 1.618em;" id="novalnet-instalment-about-mandate">
+          {txt key=XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT1}
+          <br />
+          <br />
+          <strong>{txt key=XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT2}DE53ZZZ00000004253</strong>
+          <br />
+          <br />
+          <strong>{txt key=XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT3}</strong>{txt key=XT_NOVALNET_SEPA_MANDATE_ABOUT_TEXT4}
+        </div>
+      </div>
+
+      {form type=hidden id=instalment_sepa_invalid_account_error value=$sepa_invalid_account_error}
+      {if !empty($one_click_process_enabled)}
+      {form type=hidden id=xt_novalnet_instalment_sepa_one_click_process name=xt_novalnet_instalment_sepa_one_click_process value=$one_click_process_enabled}
+      {else}
+      {form type=hidden id=xt_novalnet_instalment_sepa_one_click_process name=xt_novalnet_instalment_sepa_one_click_process}
+      {/if}
+
+      <!-- Guarantee block -->
+      {if !empty($xt_novalnet_instalment_sepa_show_dob_field) }
+      <div class="form-group">
+        <label for="xt_novalnet_instalment_sepa_user_dob">
+          {txt key=XT_NOVALNET_DOB_FIELD_TEXT}*
+        </label>
+        {form type=text id=xt_novalnet_instalment_sepa_user_dob name=xt_novalnet_instalment_sepa_user_dob value=$customers_dob params='autocomplete=off' onkeypress = "return NovalnetUtility.isNumericBirthdate(this,event)" maxlength="10"}
+        <div id="xt_novalnet_instalment_sepa_user_dob-alert" style="color:red;"></div><span>{txt key=XT_NOVALNET_INSTALMENT_SEPA_DOB_TEXT}</span>
+        {form type=hidden id=xt_novalnet_instalment_sepa_invalid_dob_format value=$date_format_error}
+      </div>
+      {elseif !empty($xt_novalnet_instalment_sepa_guarantee_payment_country_error) || !empty($xt_novalnet_instalment_sepa_guarantee_payment_currency_error) || !empty($xt_novalnet_instalment_sepa_guarantee_payment_address_error) || !empty($xt_novalnet_instalment_sepa_guarantee_payment_mimimum_amount_error)}
+
+      <div class="form-group" style="color:red">
+        <label for="xt_novalnet_instalment_sepa_guarantee_error">
+          {txt key=XT_NOVALNET_BASIC_GUARANTEE_REQUIREMENT_MISSING_ERROR_TEXT}
+          {if ($xt_novalnet_instalment_sepa_guarantee_payment_country_error) }
+          <p style="color:black">
+            {txt key=XT_NOVALNET_BASIC_GUARANTEE_COUNTRY_MISMATCH_ERROR_TEXT}
+          </p>
+          {/if}
+
+          {if ($xt_novalnet_instalment_sepa_guarantee_payment_currency_error) }
+          <p style="color:black">
+            {txt key=XT_NOVALNET_BASIC_GUARANTEE_CURRENCY_INVALID_ERROR_TEXT}
+          </p>
+          {/if}
+
+          {if ($xt_novalnet_instalment_sepa_guarantee_payment_address_error) }
+          <p style="color:black">
+            {txt key=XT_NOVALNET_BASIC_GUARANTEE_ADDRESS_MISMATCH_ERROR_TEXT}
+          </p>
+          {/if}
+
+          {if ($xt_novalnet_instalment_sepa_guarantee_payment_mimimum_amount_error) }
+          <p style="color:black">
+            {$guarantee_minimum_amount_error_text}
+          </p>
+          {/if}
+        </label>
+      </div>
+      {/if}
+
+      {if !empty($xt_novalnet_instalment_sepa_show_dob_field) || $xt_novalnet_instalment_sepa_b2b_payment}
+      <div class="form-group col col-md-9">
+
+        <label for="xt_novalnet_instalment_sepa_cycles" class="col col-md-9">
+          {txt key=XT_NOVALNET_INSTALMENT_PLAN_TEXT}
+        </label>
+
+        <div class="col col-md-9">
+          <select name="xt_novalnet_instalment_sepa_cycles" id="xt_novalnet_instalment_sepa_cycles" class="form-control">
+
+            {foreach from=$xt_novalnet_instalment_cycles item=cycle}
+            <option value="{$cycle.value}">
+              {$cycle.label}
+            </option>
+            {/foreach}
+
+          </select>
+        </div>
+
+      </div>
+
+      <div class="form-group col col-md-9" id="novalnet-instalment-summary">
+        <input type="hidden" id="instalment_text_sepa" value="{txt key=XT_NOVALNET_INSTALMENT_TEXT}">
+        <input type="hidden" id="instalment_sepa_total_amount" value="{$xt_novalnet_instalment_total_amount}">
+        <input type="hidden" id="xt_novalnet_instalment_total_period_sepa" value="{$xt_novalnet_instalment_total_period}">
+        <input type="hidden" id="instalment_sepa_currency" value="{$selected_currency}">
+        <input type="hidden" id="instalment_text_sepa" value="{txt key=XT_NOVALNET_INSTALMENT_TEXT}">
+        <input type="hidden" id="instalment_per_month_sepa" value="{txt key=XT_NOVALNET_INSTALMENT_PER_MONTH_TEXT}">
+        <label class="col col-md-9">
+          {txt key=XT_NOVALNET_INSTALMENT_SUMMARY_TEXT}
+        </label>
+
+        <div class="col col-md-9">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>{txt key=XT_NOVALNET_INSTALMENT_CYCLES_TEXT}</th>
+                <th>{txt key=XT_NOVALNET_INSTALMENT_CYCLE_AMOUNT_TEXT}</th>
+              </tr>
+            </thead>
+            <tbody id="novalnet-instalment-sepa-summary-body">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {/if}
+
+      {if $show_federal_states eq 1}
+      <div id="federals" class="form-group row"></div>
+      {/if}
+    </fieldset>
+  </div>
+</div>
+{literal}
+<script>
+  // Validate the form fields.
+  function novalnet_instalment_sepa_validation(event, validate) {
+    var keycode = event.keyCode;
+
+    if ('which' in event) {
+      keycode = event.which;
+    }
+
+    if (validate === 'alphaNum') {
+      var reg = /^(?:[a-zA-Z0-9]+$)/;
+    } else if (validate === 'alpha') {
+      var reg = /[^0-9\[\]\/\\#,+@!^()$~%'"=:;<>{}\_\|*?`]/g;
+    } else if (validate === 'number') {
+      var reg = /^(?:[0-9]+$)/;
+    }
+
+    return (reg.test(String.fromCharCode(keycode)) || keycode == 0 || keycode == 8 || keycode == 118);
+  }
+  $('#novalnet_instalment_sepa_iban').on('keyup', function() {
+    var iban = $.trim($('#novalnet_instalment_sepa_iban').val());
+    if (iban != '') {
+      if (iban.length >= 2) {
+        var codes = ['GB', 'CH', 'MC', 'SM', 'GI'];
+        var countrycode = iban.substring(0, 2).toUpperCase();
+        if (codes.includes(countrycode)) {
+          $('#nn_instalment_sepa_bic').css('display', 'block');
+        }
+      } else {
+        $('#nn_instalment_sepa_bic').css('display', 'none');
+      }
+    }
+  });
+
+  $('#nn_instalment_sepa_new_account_link').click(function(event) {
+    $('#nn_instalment_sepa_given_account_div').hide();
+    $('#nn_instalment_sepa_new_account_div').show();
+    $('#xt_novalnet_instalment_sepa_one_click_process').val('');
+    event.stopImmediatePropagation();
+  });
+  $('#nn_instalment_sepa_given_account_link').click(function(event) {
+    $('#nn_instalment_sepa_new_account_div').hide();
+    $('#nn_instalment_sepa_given_account_div').show();
+    $('#xt_novalnet_instalment_sepa_one_click_process').val('1');
+    event.stopImmediatePropagation();
+  });
+
+  function populateSepaInstalmentCycles() {
+    var payment_name = $('#payment_code_sepa').val();
+    if (payment_name != 'xt_novalnet_instalment_sepa') {
+      return;
+    }
+
+    var $cycles = $('#xt_novalnet_instalment_sepa_cycles');
+
+    if (!$cycles.length) {
+      return;
+    }
+
+    var periodsValue = $('#xt_novalnet_instalment_total_period_sepa').val();
+    var orderTotal = parseFloat(
+      $('#instalment_sepa_total_amount').val()
+    ) || 0;
+
+    var paymentFee = parseFloat($('#instalment_sepa_payment_fee').val() || 0);
+
+    var currency = $('#instalment_sepa_currency').val() || 'EUR';
+
+    var instalmentText =
+      $('#instalment_text_sepa').val() || '';
+
+    var perMonthText =
+      $('#instalment_per_month_sepa').val() || '';
+
+    if (!periodsValue || !orderTotal) {
+      $cycles.empty();
+      return;
+    }
+    orderTotal = paymentFee != 0 ? orderTotal + paymentFee : orderTotal;
+
+    var periods = periodsValue.split(',');
+
+    $cycles.empty();
+
+    $.each(periods, function(index, periodValue) {
+
+      var period = parseInt($.trim(periodValue), 10);
+
+      if (!period) {
+        return;
+      }
+
+      var cycleAmount = (
+        orderTotal / period
+      ).toFixed(2).replace('.', ',');
+
+      if (parseFloat(cycleAmount) < 9.99) {
+        return;
+      }
+
+      var label =
+        period +
+        ' ' +
+        instalmentText +
+        ' - ' +
+        cycleAmount +
+        ' ' +
+        currency +
+        ' ' +
+        perMonthText;
+
+      $cycles.append($('<option>', {
+        value: period,
+        text: label
+      }));
+    });
+  }
+
+  function updateSepaInstalmentSummary() {
+
+    var payment_name = $('#payment_code_sepa').val();
+    if (payment_name != 'xt_novalnet_instalment_sepa') {
+      return;
+    }
+
+    var $cycles = $('#xt_novalnet_instalment_sepa_cycles');
+    var $summary = $('#novalnet-instalment-sepa-summary-body');
+
+    if (!$cycles.length || !$summary.length) {
+      return;
+    }
+
+    var cycles = parseInt($cycles.val(), 10);
+
+    if (!cycles || cycles <= 0) {
+      $summary.empty();
+      return;
+    }
+
+    var instalmentText = $('#instalment_text_sepa').val();
+    var orderTotal = parseFloat($('#instalment_sepa_total_amount').val()) || 0;
+    var paymentFee = parseFloat($('#instalment_sepa_payment_fee').val() || 0);
+    orderTotal = paymentFee != 0 ? orderTotal + paymentFee : orderTotal;
+
+    var totalAmount = orderTotal.toFixed(2);
+
+    var splitAmount = 0;
+    var instalmentDue = 0;
+    var lastInstalmentDue = 0;
+
+    for (var i = 1; i <= cycles; i++) {
+      if (i !== cycles) {
+        splitAmount = (parseFloat(totalAmount) / cycles).toFixed(2);
+        instalmentDue = parseFloat(instalmentDue) + parseFloat(splitAmount);
+      } else {
+        lastInstalmentDue = (parseFloat(totalAmount) - parseFloat(instalmentDue)).toFixed(2);
+      }
+    }
+
+    var html = '';
+
+    for (var i = 1; i <= cycles; i++) {
+
+      var amount;
+
+      if (i === cycles) {
+        amount = lastInstalmentDue;
+      } else {
+        amount = splitAmount;
+      }
+
+      html += '<tr>' + '<td>' + sepaGetOrdinal(i) + ' ' + instalmentText + '</td>' + '<td>' + amount.replace('.', ',') + ' EUR' + '</td>' + '</tr>';
+    }
+
+    $summary.html(html);
+  }
+
+  function sepaGetOrdinal(number) {
+
+    if (number % 100 >= 11 && number % 100 <= 13) {
+      return number + 'th';
+    }
+
+    switch (number % 10) {
+      case 1:
+        return number + 'st';
+
+      case 2:
+        return number + 'nd';
+
+      case 3:
+        return number + 'rd';
+
+      default:
+        return number + 'th';
+    }
+  }
+
+  $(function() {
+    populateSepaInstalmentCycles();
+    $(document).on('change.novalnetSepa', '#xt_novalnet_instalment_sepa_cycles', updateSepaInstalmentSummary);
+    updateSepaInstalmentSummary();
+  });
+</script>
+{/literal}

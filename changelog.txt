@@ -1,0 +1,46 @@
+*** Changelog ***
+
+= 11.6.0 - 2026.08.29 =
+
+* New - EPC/SPC QR code implemented for Prepayment, Invoice, Invoice with payment guarantee and Instalment by Invoice payments
+* New - Implemented instalment payment for Direct Debit SEPA and Invoice
+* Enhanced - iDEAL payment logo and title to iDEAL | Wero
+* Removed - Sofort, giropay, and Barzahlen/Viacash payments
+
+= 11.5.0 - 2025.05.20 =
+
+* New - Implemented Online bank transfer payment
+* Fix - Order amount is now correctly updated in Novalnet Transaction Details based on the currency used
+* Enhanced - Built-in Sub-Resource Integrity (SRI) integrated for JavaScript files to improve security for preventing unauthorized modifications
+* Enhanced - Minification of CSS and JavaScript files for enhanced performance
+* Enhanced - Optimized the Callback/Webhook process for fetching Dynamic IP
+
+= 11.4.0 - 2025.01.22 =
+
+* New - Implemented TWINT payment
+* New - Implemented enforce 3D secure payment for countries outside EU
+* Fix - Compatibility for XT:Commerce 6.6.5
+* Enhanced - For IBAN-specific countries, the BIC field displayed for payment like Direct Debit SEPA, Direct Debit SEPA with payment guarantee
+* Removed  - One-click shopping and Zero amount booking for PayPal payment
+
+= 11.3.0 - 2021.02.15 = 
+
+* Fix      - Chrome SameSite cookies
+* New      - Implemented Payment duration for Prepayment
+* Enhanced - Multistore configuration has been optimized in shop back-end
+* Enhanced - Callback has been optimized for the payment module as per the new testcase
+* Enhanced - Barzahlen payment name and logo
+* Enhanced - Adjusted the payment module for IPV6 condition
+* Enhanced - Implemented new encryption method for redirect payments
+* Enhanced - Auto configuration call perform via cURL method
+* Removed  - Proxy server configuration
+* Removed  - Gateway timeout configuration
+* Removed  - href links for the payment logo
+* Removed  - PIN by callback and PIN by SMS for Direct Debit SEPA and Invoice payment methods
+* Removed  - Referrer Id configuration 
+
+= 11.2.0 - 2019.09.11 =
+
+* New release
+
+*****************************************

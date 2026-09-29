@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf8"?>
+<xtcommerceplugin>
+  <title>Novalnet Instalment by Direct Debit SEPA (Novalnet Ratenzahlung per SEPA-Lastschrift)</title>
+  <version>11.6.0</version>
+  <code>xt_novalnet_instalment_sepa</code>
+  <url>https://www.novalnet.de</url>
+  <description>Novalnet Instalment by Direct Debit SEPA</description>
+  <icon>xt_novalnet_instalment_sepa.png</icon>
+  <developer>Novalnet</developer>
+  <type>payment</type>
+  <payment>
+    <payment_code>xt_novalnet_instalment_sepa</payment_code>
+    <payment_dir>xt_novalnet_instalment_sepa</payment_dir>
+    <payment_icon>xt_novalnet_instalment_sepa.png</payment_icon>
+    <payment_tpl>xt_novalnet_instalment_sepa.html</payment_tpl>
+    <de>
+      <title>Ratenzahlung per SEPA-Lastschrift</title>
+      <description>Der Betrag wird durch Novalnet von Ihrem Konto abgebucht</description>
+    </de>
+    <en>
+      <title>Instalment by Direct Debit SEPA</title>
+      <description>The amount will be debited from your account by Novalnet</description>
+    </en>
+  </payment>
+  <db_install>
+    <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_instalment_sepa/hooks/db_install.php');]]>
+  </db_install>
+  <plugin_code>
+    <code>
+      <hook>admin_dropdown.php:dropdown</hook>
+      <phpcode>
+        <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_admin_dropdown.php');]]>
+      </phpcode>
+      <order>0</order>
+      <active>1</active>
+    </code>
+    <code>
+      <hook>module_checkout.php:checkout_payment_check</hook>
+      <phpcode>
+        <![CDATA[$_SESSION['novalnet_selected_payment'] = $_REQUEST['selected_payment'];include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_instalment_sepa/hooks/novalnet_validation_process.php');]]>
+      </phpcode>
+      <order>1</order>
+      <active>1</active>
+    </code>
+    <code>
+      <hook>module_checkout.php:checkout_proccess_order_processed</hook>
+      <phpcode>
+        <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_process.php');]]>
+      </phpcode>
+      <order>2</order>
+      <active>1</active>
+    </code>
+    <code>
+      <hook>module_checkout.php:checkout_selections</hook>
+      <phpcode>
+        <![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_selection.php');]]>
+      </phpcode>
+      <order>3</order>
+      <active>1</active>
+    </code>
+    <code>
+      <hook>class.payment.php:_set_bottom</hook>
+      <phpcode>
+        <![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_admin_post_validation.php';]]>
+      </phpcode>
+      <order>5</order>
+      <active>1</active>
+    </code>
+    <code>
+      <hook>adminHandler.php:_bottom</hook>
+      <phpcode>
+        <![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_update_payment_text.php';]]>
+      </phpcode>
+      <order>6</order>
+      <active>1</active>
+    </code>
+  </plugin_code>
+  <configuration_payment>
+    <config>
+      <key>TEST_MODE</key>
+      <value>false</value>
+      <type>dropdown</type>
+      <order>1</order>
+      <url>conf_truefalse</url>
+      <de>
+        <title>Testmodus aktivieren</title>
+        <description>Die Zahlung wird im Testmodus durchgeführt, daher wird der Betrag für diese Transaktion nicht eingezogen.</description>
+      </de>
+      <en>
+        <title>Enable test mode</title>
+        <description>The payment will be processed in the test mode therefore amount for this transaction will not be charged</description>
+      </en>
+    </config>
+    <config>
+      <key>ENABLE_AUTHORIZATION</key>
+      <type>dropdown</type>
+      <value>none</value>
+      <url>plg_xt_novalnet_instalment_sepa_authorization_types</url>
+      <order>2</order>
+      <de>
+        <title>Aktion für vom Besteller autorisierte Zahlungen</title>
+      </de>
+      <en>
+        <title>Payment Action</title>
+      </en>
+    </config>
+    <config>
+      <key>ONHOLD_LIMIT_AMOUNT</key>
+      <type>textfield</type>
+      <value></value>
+      <order>3</order>
+      <de>
+        <title>Mindesttransaktionsbetrag für die Autorisierung<![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></title>
+        <description>Übersteigt der Auftragswert das genannte Limit, wird die Transaktion bis zu Ihrer Bestätigung der Transaktion auf Eis gelegt. Sie können das Feld leer lassen, wenn Sie alle Transaktionen wie gewartet bearbeiten möchten.</description>
+      </de>
+      <en>
+        <title>Minimum transaction amount for authorization<![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)</i>]]></title>
+        <description> In case the order amount exceeds the mentioned limit, the transaction will be set on-hold till your confirmation of the transaction. You can leave the field empty if you wish to process all the transactions as on-hold.</description>
+      </en>
+    </config>
+    <config>
+      <key>ORDER_STATUS</key>
+      <type>dropdown</type>
+      <url>status:order_status</url>
+      <order>5</order>
+      <value>23</value>
+      <de>
+        <title>Status für erfolgreichen Auftragsabschluss</title>
+      </de>
+      <en>
+        <title>Completed order status</title>
+      </en>
+    </config>
+    <config>
+      <key>SHOPPING_TYPE</key>
+      <type>dropdown</type>
+      <value>none</value>
+      <url>plg_xt_novalnet_instalment_sepa_shopping_types</url>
+      <order>6</order>
+      <de>
+        <title>Einkaufstyp auswählen</title>
+      </de>
+      <en>
+        <title>Select shopping type</title>
+      </en>
+    </config>
+    <config>
+      <key>GUARANTEE_PAYMENT_MIN_AMOUNT</key>
+      <type>textfield</type>
+      <value></value>
+      <order>7</order>
+      <de>
+        <title>Mindestbestellbetrag für Zahlungsgarantie<![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></title>
+        <description>Diese Einstellung überschreibt die Standardeinstellung für den Mindest-Bestellbetrag. Anmerkung: der Mindest-Bestellbetrag sollte größer oder gleich 20,00 EUR sein.</description>
+      </de>
+      <en>
+        <title>Minimum order amount for payment guarantee<![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)</i>]]></title>
+        <description>This setting will override the default setting made in the minimum order amount. Note: Minimum amount should be greater than or equal to 20,00 EUR.</description>
+      </en>
+    </config>
+    <config>
+      <key>INSTALMENT_CYCLES</key>
+      <type>textfield</type>
+      <value>2,3,4,5,6,7,8,9,10,11,12,15,18,24,36</value>
+      <order>8</order>
+      <de>
+        <title>Ratenzahlungszyklen</title>
+        <description>
+          Wählen Sie die Ratenzahlungszyklen aus, die im Ratenzahlungsplan zur Verfügung stehen.
+        </description>
+      </de>
+      <en>
+        <title>Instalment cycles</title>
+        <description>
+          Select the instalment cycles that can be availed in the instalment plan
+        </description>
+      </en>
+    </config>
+    <config>
+      <key>GUARANTEE_ORDER_STATUS</key>
+      <type>dropdown</type>
+      <url>status:order_status</url>
+      <order>9</order>
+      <value>17</value>
+      <de>
+        <title>Status für offene Zahlungen</title>
+        <description>Diese Einstellung überschreibt die Standardeinstellung für den Mindest-Bestellbetrag.Anmerkung: der Mindest-Bestellbetrag sollte größer oder gleich 20,00 EUR sein.</description>
+      </de>
+      <en>
+        <title>Payment status for the pending payment</title>
+        <description>This setting will override the default setting made in the minimum order amount. Note: Minimum amount should be greater than or equal to 20,00 EUR.</description>
+      </en>
+    </config>
+    <config>
+      <key>INFORMATION_TO_USER</key>
+      <type>textfield</type>
+      <value></value>
+      <order>10</order>
+      <de>
+        <title>Benachrichtigung des Käufers</title>
+        <description>Der eingegebene Text wird auf der Checkout-Seite angezeigt.</description>
+      </de>
+      <en>
+        <title>Notification for the buyer</title>
+        <description>The entered text will be displayed on the checkout page</description>
+      </en>
+    </config>
+  </configuration_payment>
+</xtcommerceplugin>

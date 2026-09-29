@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+    <language_content>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_NONE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Keiner</value>
+            </de>
+            <en>
+              <value>None</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_AMOUNT_INVALID_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Ungültiger Betrag</value>
+            </de>
+            <en>
+                <value>The amount is invalid</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_GUARANTEE_MIN_ERROR_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Der Mindestbetrag sollte bei mindestens 9,99 EUR</value>
+            </de>
+            <en>
+                <value>The minimum amount should be at least 9,99 EUR</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_PAYMENT_GUARANTEE_TITLE</key>
+            <class>admin</class>
+            <de>
+                <value><![CDATA[<br /><b>Einstellungen für die Zahlungsgarantie</b><br />]]></value>
+            </de>
+            <en>
+              <value><![CDATA[ <br /><b>Payment guarantee configuration</b><br/>]]></value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_PAYMENT_GUARANTEE_HINT</key>
+            <class>admin</class>
+            <de>
+                <value><![CDATA[<br /> <b>Grundanforderungen für die Zahlungsgarantie</b><ol><li>Zugelassene Staaten: DE, AT, CH</li><li>Zugelassene Währung: EUR</li><li>Mindestbetrag der Bestellung: 9,99 EUR</li><li>Mindestalter: 18 Jahre</li><li>Rechnungsadresse und Lieferadresse müssen übereinstimmen</li></ol><br />]]></value>
+            </de>
+            <en>
+              <value><![CDATA[<br /> <b>Basic requirements for payment guarantee</b><ol><li>Allowed countries: DE, AT, CH</li><li>Allowed currency: EUR</li><li>Minimum order amount: 9,99 EUR or more</li><li>Age limit: 18 years or more</li><li>The billing address must be the same as the shipping address</li></ol><br />]]></value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_CAPTURE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung einziehen</value>
+            </de>
+            <en>
+                <value>Capture</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_AUTHORIZE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung autorisieren</value>
+            </de>
+            <en>
+                <value>Authorize</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_INVOICE_DOB_TEXT</key>
+            <class>both</class>
+            <de>
+                <value>(TT.MM.JJJJ)</value>
+            </de>
+            <en>
+                <value>(DD.MM.YYYY)</value>
+            </en>
+        </phrase>
+    </language_content>
+</xtcommerceplugin>

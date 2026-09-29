@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+    <language_content>
+        <phrase>
+            <key>XT_NOVALNET_PREPAYMENT_DUEDATE_ERROR_TEXT</key>
+            <class>both</class>
+            <de>
+                <value>Vorkasse Fälligkeitsdatum Ungültiger</value>
+            </de>
+            <en>
+                <value>Prepayment Due date is not valid</value>
+            </en>
+        </phrase>
+    </language_content>
+</xtcommerceplugin>

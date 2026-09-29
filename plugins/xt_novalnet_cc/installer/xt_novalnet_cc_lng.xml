@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+    <language_content>
+        <phrase>
+            <key>XT_NOVALNET_CC_SHOPTYPE_SELECT_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Einkaufstyp auswählen</value>
+            </de>
+            <en>
+              <value>Select shopping type</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_ONECLICK_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Kauf mit einem Klick</value>
+            </de>
+            <en>
+              <value>One-click shopping</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_ZEROAMOUNT_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Transaktionen mit Betrag 0</value>
+            </de>
+            <en>
+              <value>Zero amount booking</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_IFRAME_CARD_DETAILS_ERROR_TEXT</key>
+            <class>store</class>
+            <de>
+                <value>Ihre Kreditkartendaten sind ungültig</value>
+            </de>
+            <en>
+              <value>Your credit card details are invalid</value>
+            </en>
+        </phrase>
+         <phrase>
+            <key>XT_NOVALNET_CC_CARD_NAME_ERROR_TEXT</key>
+            <class>store</class>
+            <de>
+                <value>Bitte geben Sie den gültigen Namen des Karteninhabers ein</value>
+            </de>
+            <en>
+              <value>Please enter the valid card holder name</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_CARD_NO_ERROR_TEXT</key>
+            <class>store</class>
+            <de>
+                <value>Bitte geben Sie die gültige Kartennummer ein</value>
+            </de>
+            <en>
+              <value>Please enter the valid card number</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_CARD_MONTH_YEAR_ERROR_TEXT</key>
+            <class>store</class>
+            <de>
+                <value>Bitte geben Sie den gültigen Verfallsmonat / das Verfallsjahr im angegebenen Format ein</value>
+            </de>
+            <en>
+              <value>Please enter the valid expiry month / year in the given format</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_CARD_CVV_ERROR_TEXT</key>
+            <class>store</class>
+            <de>
+                <value>Bitte geben Sie den gültigen CVC/CVV/CID ein</value>
+            </de>
+            <en>
+              <value>Please enter the valid CVC/CVV/CID</value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_CC_CAPTURE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung einziehen</value>
+            </de>
+            <en>
+                <value>Capture</value>
+            </en>
+        </phrase><phrase>
+            <key>XT_NOVALNET_CC_AUTHORIZE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung autorisieren</value>
+            </de>
+            <en>
+                <value>Authorize</value>
+            </en>
+        </phrase>
+    </language_content>
+</xtcommerceplugin>

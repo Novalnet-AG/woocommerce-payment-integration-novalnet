@@ -1,0 +1,95 @@
+<div class="item item-{$payment_code}{if !empty($payment_selected) && $payment_code == $payment_selected} selected{/if}">
+    {if $payment_logo == 'true'}
+        <a title="{$payment_name}" alt="{$payment_name}" target="_new" >
+            <img src="{$payment_logo_src}" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right"/>
+        </a>
+    {/if}
+    <header data-toggle="collapse" data-target=".item-{$payment_code} .collapse">
+        <label class="cursor-pointer">
+            <span class="check">
+                {if !empty($payment_hidden)}
+                    {form type=hidden name=selected_payment value=$payment_code}
+                {else}
+                    {if !empty($payment_selected) && $payment_code == $payment_selected}
+                        {form type=radio name=selected_payment value=$payment_code checked=true}
+                    {else}
+                        {form type=radio name=selected_payment value=$payment_code}
+                    {/if}
+                {/if}
+            </span>
+            <span class="name payment-name">
+                {$payment_name}
+            </span>
+            {if !empty($payment_price.formated)}
+                <small class="price">
+                    &nbsp;{$payment_price.formated}
+                </small>
+            {/if}
+        </label>
+    </header>
+    <div class="desc collapse {if !empty($payment_selected) && $payment_code == $payment_selected} in{/if} payment-desc">
+        {if !empty($payment_desc)}
+            <p>
+                {$payment_desc}
+            </p>
+        {/if}
+
+        {if $test_mode == 'true'}
+            <p style="color:red">
+                {txt key=XT_NOVALNET_TEST_MODE_NOTIFICATION_TEXT}
+            </p>
+        {/if}
+
+        {if !empty($user_info)}
+            <p>
+                {$user_info}
+            </p>
+        {/if}
+        <fieldset>
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+            <script  type="text/javascript" src="{$js_date_picker_path}"></script>
+             <script type="text/javascript" src="https://cdn.novalnet.de/js/v2/NovalnetUtility.js"></script>
+            <!-- Guarantee block -->
+            {if !empty($xt_novalnet_invoice_enable_guarantee_payment) && !empty($xt_novalnet_invoice_show_dob_field) }
+                <div class="form-group col col-md-9">
+                    <label for="novalnet_invoice_user_dob" class="col col-md-9">
+                        {txt key=XT_NOVALNET_DOB_FIELD_TEXT}*
+                    </label>
+                    {form type=text id=xt_novalnet_invoice_user_dob name=xt_novalnet_invoice_user_dob value=$customers_dob params='autocomplete=off' onkeypress = "return NovalnetUtility.isNumericBirthdate(this,event)" maxlength="10"}<div id="xt_novalnet_invoice_user_dob-alert" style="color:black;"></div><span>{txt key=XT_NOVALNET_INVOICE_DOB_TEXT}</span>
+                    {form type=hidden id=xt_novalnet_invoice_invalid_dob_format value=$date_format_error}
+                </div>
+                
+                {elseif !empty($xt_novalnet_invoice_guarantee_payment_country_error) ||  !empty($xt_novalnet_invoice_guarantee_payment_currency_error) || !empty($xt_novalnet_invoice_guarantee_payment_address_error) || !empty($xt_novalnet_invoice_guarantee_payment_mimimum_amount_error)}
+                
+                <!-- Guarantee error block -->
+                <div class="form-group" style="color:red">
+                    <label for="xt_novalnet_invoice_guarantee_error">
+                        {txt key=XT_NOVALNET_BASIC_GUARANTEE_REQUIREMENT_MISSING_ERROR_TEXT}
+                        {if ($xt_novalnet_invoice_guarantee_payment_country_error) }
+                        <p style="color:black">
+                            {txt key=XT_NOVALNET_BASIC_GUARANTEE_COUNTRY_MISMATCH_ERROR_TEXT}
+                        </p> 
+                        {/if}
+                        {if ($xt_novalnet_invoice_guarantee_payment_currency_error) }
+                        <p style="color:black">
+                            {txt key=XT_NOVALNET_BASIC_GUARANTEE_CURRENCY_INVALID_ERROR_TEXT}
+                        </p>
+                        {/if}
+                        {if ($xt_novalnet_invoice_guarantee_payment_address_error) }
+                        <p style="color:black">
+                            {txt key=XT_NOVALNET_BASIC_GUARANTEE_ADDRESS_MISMATCH_ERROR_TEXT}
+                        </p>
+                        {/if}
+                        {if ($xt_novalnet_invoice_guarantee_payment_mimimum_amount_error) }
+                        <p style="color:black">
+                            {$guarantee_minimum_amount_error_text}
+                        </p>
+                        {/if}
+                    </label>
+                </div>
+            {/if}
+        </fieldset>
+    </div>
+</div>

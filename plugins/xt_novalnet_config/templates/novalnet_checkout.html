@@ -1,0 +1,52 @@
+<div id="checkout">
+    <div class="progress checkout-progress">
+        <div class="{if $page_action == payment OR $page_action == confirmation}cursor-pointer{elseif $page_action != success}cursor-help{/if} progress-bar {if $page_action == shipping}progress-bar-success progress-bar-striped active{/if} {if $page_action == payment OR $page_action == confirmation OR $page_action == success}progress-bar-success done{/if}"
+             style="width: 25%"
+             title="{txt key=TEXT_SELECT_SHIPPING_DESC}"
+             onclick="{if $page_action == payment OR $page_action == confirmation}document.location.href='{link page='checkout' paction='shipping' conn=SSL}'{/if}">
+            <span class="hidden-xs">{txt key=TEXT_SELECT_SHIPPING}{if $page_action == success}&nbsp;<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+            <span class="visible-xs"><i class="fa fa-truck"></i>{if $page_action == success}&nbsp;<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+        </div>
+        <div class="{if $page_action == confirmation}cursor-pointer{elseif $page_action != success}cursor-help{/if} progress-bar {if $page_action == payment}progress-bar-success progress-bar-striped active{else}progress-bar-default{/if} {if $page_action == confirmation OR $page_action == success}progress-bar-success done{/if}"
+             style="width: 25%"
+             title="{txt key=TEXT_SELECT_PAYMENT_DESC}"
+             onclick="{if $page_action == confirmation}document.location.href='{link page='checkout' paction='payment' conn=SSL}'{/if}">
+            <span class="hidden-xs">{txt key=TEXT_SELECT_PAYMENT}{if $page_action == success}&nbsp;<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+            <span class="visible-xs"><i class="fa fa-credit-card"></i>{if $page_action == success}&nbsp;<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+        </div>
+        <div class="{if $page_action != success}cursor-help{/if} progress-bar {if $page_action == confirmation}progress-bar-success progress-bar-striped active{else}progress-bar-default{/if} {if $page_action == success}progress-bar-success done{/if}"
+             style="width: 25%"
+             title="{txt key=TEXT_CONFIRMATION_DESC}">
+            <span class="hidden-xs">{txt key=TEXT_CONFIRMATION}{if $page_action == success}&nbsp;<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+            <span class="visible-xs"><i class="fa fa-handshake-o" aria-hidden="true"></i>&nbsp;{if $page_action == success}<i class="fa fa-check" style="font-size: 12px;"></i>{/if}</span>
+        </div>
+        <div class="progress-bar {if $page_action == success}progress-bar-success active{else}progress-bar-default{/if} {if $page_action == success}progress-bar-success done{/if}"
+             style="width: 25%"
+             title="{txt key=TEXT_SUCCESS_DESC}">
+            <span {if $page_action == success}class="bold"{/if}>{txt key=TEXT_SUCCESS}</span>
+
+        </div>
+    </div>
+
+    {$message}
+
+    {if $page_action == shipping || $page_action == ''}
+    {include file="xtCore/pages/checkout/subpage_shipping.html" type="tpl_include"}
+    {/if}
+
+    {if $page_action == payment}
+    {include file="xtCore/pages/checkout/subpage_payment.html" type="tpl_include"}
+    {/if}
+
+    {if $page_action == confirmation}
+    {include file="xtPro/xtCore/pages/checkout/subpage_confirmation.html" type="tpl_include"}
+    {/if}
+
+    {if $page_action == pay}
+    {include file="xtCore/pages/checkout/subpage_pay.html" type="tpl_include"}
+    {/if}
+
+    {if $page_action == success}
+    {include file="xtCore/pages/checkout/subpage_success.html" type="tpl_include"}
+    {/if}
+</div>

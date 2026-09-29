@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xtcommerceplugin>
+    <language_content>
+        <phrase>
+            <key>XT_NOVALNET_PAYPAL_REFERENCE_TRANSACTION_HINT</key>
+            <class>admin</class>
+            <de>
+                <value><![CDATA[<span>Um PayPal-Transaktionen zu akzeptieren, konfigurieren Sie Ihre PayPal-API-Informationen im <a href=https://admin.novalnet.de target=_blank >Novalnet Admin portal</a> -> Projekte -> Wählen Sie Ihr Projekt -> Zahlungsmethoden -> Paypal -> Konfigurieren</span><br /><br /> ]]></value>
+            </de>
+            <en>
+				<value><![CDATA[<span>To accept PayPal transactions, configure your PayPal API info in the <a href=https://admin.novalnet.de target=_blank >Novalnet Admin portal</a> -> Projects -> choose your project ->Payment Methods ->Paypal -> Configure</span><br /><br /> ]]></value>
+            </en>
+        </phrase>
+        <phrase>
+            <key>XT_NOVALNET_PAYPAL_CAPTURE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung einziehen</value>
+            </de>
+            <en>
+                <value>Capture</value>
+            </en>
+        </phrase><phrase>
+            <key>XT_NOVALNET_PAYPAL_AUTHORIZE_TEXT</key>
+            <class>admin</class>
+            <de>
+                <value>Zahlung autorisieren</value>
+            </de>
+            <en>
+                <value>Authorize</value>
+            </en>
+        </phrase>
+    </language_content>
+</xtcommerceplugin>

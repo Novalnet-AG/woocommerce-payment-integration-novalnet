@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xtcommerceplugin>
+    <title>Novalnet eps (Novalnet eps)</title>
+    <version>11.6.0</version>
+    <code>xt_novalnet_eps</code>
+    <url>https://www.novalnet.de</url>
+    <description>Novalnet eps</description>
+    <developer>Novalnet</developer>
+    <icon>xt_novalnet_eps.png</icon>
+    <type>payment</type>
+    <payment>
+        <payment_code>xt_novalnet_eps</payment_code>
+        <payment_dir>xt_novalnet_eps</payment_dir>
+        <payment_icon>xt_novalnet_eps.png</payment_icon>
+        <payment_tpl>xt_novalnet_eps.html</payment_tpl>
+        <de>
+            <title>eps</title>
+            <description>Sie werden zu eps weitergeleitet. Um eine erfolgreiche Zahlung zu gewährleisten, darf die Seite nicht geschlossen oder neu geladen werden, bis die Bezahlung abgeschlossen ist</description>
+        </de>
+        <en>
+            <title>eps</title>
+            <description>You will be redirected to eps. Please don’t close or refresh the browser until the payment is completed</description>
+        </en>
+    </payment>
+    <db_install>
+        <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_eps/hooks/db_install.php');]]>
+    </db_install>
+    <plugin_code>
+        <code>
+            <hook>module_checkout.php:checkout_selections</hook>
+            <phpcode>
+                <![CDATA[
+                include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_selection.php');
+            ]]>
+            </phpcode>
+            <order>0</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_proccess_order_processed</hook>
+            <phpcode>
+                <![CDATA[
+                include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_process.php');
+            ]]>
+            </phpcode>
+            <order>1</order>
+            <active>1</active>
+        </code>
+    </plugin_code>
+    <configuration_payment>
+       <config>
+            <key>TEST_MODE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>1</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Testmodus aktivieren</title>
+            </de>
+            <en>
+                <title>Enable test mode</title>
+            </en>
+        </config>
+        <config>
+            <key>ORDER_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>2</order>
+            <value>23</value>
+            <de>
+               <title>Status für erfolgreichen Auftragsabschluss</title>
+            </de>
+            <en>
+                <title>Completed order status</title>
+            </en>
+        </config>
+        <config>
+            <key>INFORMATION_TO_USER</key>
+            <type>textfield</type>
+            <value></value>
+            <order>4</order>
+            <de>
+                <title>Benachrichtigung des Käufers</title>
+            </de>
+            <en>
+                <title>Notification for the buyer</title>
+            </en>
+        </config>
+    </configuration_payment>
+</xtcommerceplugin>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf8"?>
+<xtcommerceplugin>
+  <title>Novalnet Credit/Debit Cards (Novalnet Kredit- / Debitkarte)</title>
+  <version>11.6.0</version>
+  <code>xt_novalnet_cc</code>
+  <url>https://www.novalnet.de</url>
+  <description>Novalnet Kreditkarte</description>
+  <icon>xt_novalnet_cc.png</icon>
+  <developer>Novalnet</developer>
+  <type>payment</type>
+  <payment>
+  <payment_code>xt_novalnet_cc</payment_code>
+    <payment_dir>xt_novalnet_cc</payment_dir>
+    <payment_icon>xt_novalnet_cc.png</payment_icon>
+    <payment_tpl>xt_novalnet_cc.html</payment_tpl>
+        <de>
+            <title>Kredit- / Debitkarte</title>
+            <description>Der Betrag wird Ihrer Kredit-/Debitkarte belastet</description>
+        </de>
+        <en>
+            <title>Credit/Debit Cards</title>
+            <description>The amount will be debited from your credit/debit card</description>
+        </en>
+    </payment>
+    <db_install>
+        <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_cc/hooks/db_install.php');]]>
+    </db_install>
+    <plugin_code>
+        <code>
+            <hook>admin_dropdown.php:dropdown</hook>
+            <phpcode>
+                <![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_admin_dropdown.php');]]>
+            </phpcode>
+            <order>0</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_payment_check</hook>
+            <phpcode>
+                <![CDATA[
+                    include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_cc/hooks/novalnet_validation_process.php');
+                ]]>
+            </phpcode>
+            <order>1</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_proccess_order_processed</hook>
+            <phpcode>
+                <![CDATA[
+                include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_process.php');
+            ]]>
+            </phpcode>
+            <order>2</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_selections</hook>
+            <phpcode>
+                <![CDATA[
+                include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_selection.php');
+            ]]>
+            </phpcode>
+            <order>3</order>
+            <active>1</active>
+        </code>
+    </plugin_code>
+    <configuration_payment>
+        <config>
+            <key>TEST_MODE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>1</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Testmodus aktivieren</title>
+                <description>Die Zahlung wird im Testmodus durchgeführt, daher wird der Betrag für diese Transaktion nicht eingezogen.</description>
+            </de>
+            <en>
+                <title>Enable test mode</title>
+                <description>The payment will be processed in the test mode therefore amount for this transaction will not be charged</description>
+            </en>
+        </config>
+        <config>
+            <key>AMEX_CARD_ENABLE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>2</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>AMEX-Logo anzeigen</title>
+                <description>AMEX-Logo auf der Checkout-Seite anzeigen</description>
+            </de>
+            <en>
+                <title>Display AMEX logo</title>
+                <description>Display AMEX logo in checkout page</description>
+            </en>
+        </config>
+        <config>
+            <key>MAESTRO_CARD_ENABLE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>4</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Maestro-Logo anzeigen</title>
+                <description>Maestro-Logo auf der Checkout-Seite anzeigen</description>
+            </de>
+            <en>
+                <title>Display Maestro logo</title>
+                <description>Display Maestro logo in checkout page</description>
+            </en>
+        </config>
+        <config>
+          <key>ENABLE_AUTHORIZATION</key>
+           <type>dropdown</type>
+            <value>none</value>
+            <url>plg_xt_novalnet_cc_authorization_types</url>
+            <order>5</order>
+            <de>
+                <title>Aktion für vom Besteller autorisierte Zahlungen</title>
+            </de>
+            <en>
+                <title>Payment Action</title>
+            </en>
+        </config>
+        <config>
+            <key>ONHOLD_LIMIT_AMOUNT</key>
+            <type>textfield</type>
+            <value></value>
+            <order>6</order>
+            <de>
+                <title>Mindesttransaktionsbetrag für die Autorisierung <![CDATA[<br /><i>(in der kleinsten Währungseinheit, z.B. 100 Cent = entsprechen 1.00 EUR)</i>]]></title>
+                <description>Übersteigt der Auftragswert das genannte Limit, wird die Transaktion bis zu Ihrer Bestätigung der Transaktion auf Eis gelegt. Sie können das Feld leer lassen, wenn Sie alle Transaktionen wie gewartet bearbeiten möchten.</description>
+            </de>
+            <en>
+                <title>Minimum transaction amount for authorization  <![CDATA[<br /><i>(in minimum unit of currency. E.g. enter 100 which is equal to 1.00)</i>]]></title>
+                <description> In case the order amount exceeds the mentioned limit, the transaction will be set on-hold till your confirmation of the transaction. You can leave the field empty if you wish to process all the transactions as on-hold.</description>
+            </en>
+        </config>
+        <config>
+            <key>ENABLE_3D_ENFORE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>7</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>3D-Secure-Zahlungen außerhalb der EU erzwingen</title>
+                <description>Wenn Sie diese Option aktivieren, werden alle Zahlungen mit Karten, die außerhalb der EU ausgegeben wurden, mit der starken Kundenauthentifizierung (Strong Customer Authentication, SCA) von 3D-Secure 2.0 authentifiziert.</description>
+            </de>
+            <en>
+                <title>Enforce 3D secure payment outside EU</title>
+                <description>By enabling this option, all payments from cards issued outside the EU will be authenticated via 3DS 2.0 SCA.</description>
+            </en>
+        </config>
+        <config>
+            <key>ORDER_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>9</order>
+            <value>23</value>
+            <de>
+                <title>Status für erfolgreichen Auftragsabschluss</title>
+            </de>
+            <en>
+                <title>Completed order status</title>
+            </en>
+        </config>
+        <config>
+            <key>SHOPPING_TYPE</key>
+            <type>dropdown</type>
+            <value>none</value>
+            <url>plg_xt_novalnet_cc_shopping_types</url>
+            <order>11</order>
+            <de>
+                <title>Einkaufstyp auswählen</title>
+            </de>
+            <en>
+                <title>Select shopping type</title>
+            </en>
+        </config>
+        <config>
+            <key>INFORMATION_TO_USER</key>
+            <type>textfield</type>
+            <value></value>
+            <order>12</order>
+            <de>
+                <title>Benachrichtigung des Käufers</title>
+                <description>Der eingegebene Text wird auf der Checkout-Seite angezeigt.</description>
+            </de>
+            <en>
+                <title>Notification for the buyer</title>
+                <description>The entered text will be displayed on the checkout page</description>
+            </en>
+        </config>
+        <config>
+            <key>STANDARD_STYLE_LABEL_CONFIGURATION</key>
+            <type>textarea</type>
+            <value>color: white;</value>
+            <order>22</order>
+            <de>
+                <title>Angepasste CSS-Einstellungen Beschriftung</title>
+            </de>
+            <en>
+                <title>Custom CSS settings Label</title>
+            </en>
+        </config>
+        <config>
+            <key>STANDARD_STYLE_INPUT_CONFIGURATION</key>
+            <type>textarea</type>
+            <value></value>
+            <order>23</order>
+            <de>
+                <title>Angepasste CSS-Einstellungen Eingabe</title>
+            </de>
+            <en>
+                <title>Custom CSS settings Input</title>
+            </en>
+        </config>
+        <config>
+            <key>STANDARD_STYLE_CSS_CONFIGURATION</key>
+            <type>textarea</type>
+            <value>.input-group{box-sizing: border-box;width: 100%;}.label-group{font-family: pt_sansbold,Helvetica,Arial,sans-serif;color:#484848;font-weight:500;}padding: 6px 12px 45px;</value>
+            <order>24</order>
+            <de>
+                <title>Angepasste CSS-Einstellungen Text für das CSS</title>
+            </de>
+            <en>
+                <title>Custom CSS settings Css text</title>
+            </en>
+        </config>
+    </configuration_payment>
+</xtcommerceplugin>

@@ -1,0 +1,47 @@
+<div class="item item-{$payment_code}{if !empty($payment_selected) && $payment_code == $payment_selected} selected{/if}">
+    {if $payment_logo == 'true'}
+        <a title="{$payment_name}" alt="{$payment_name}" target="_new" >
+            <img src="{$payment_logo_src}" alt="{$payment_name}" class="icon img-responsive img-thumbnail pull-right"/>
+        </a>
+    {/if}
+    <header data-toggle="collapse" data-target=".item-{$payment_code} .collapse">
+        <label class="cursor-pointer">
+           <span class="check">
+                {if !empty($payment_hidden)}
+                    {form type=hidden name=selected_payment value=$payment_code}
+                {else}
+                    {(!empty($payment_selected) && $payment_code == $payment_selected) ? {form type=radio name=selected_payment value=$payment_code checked=true} : {form type=radio name=selected_payment value=$payment_code}}
+                {/if}
+            </span>
+            <span class="name payment-name">
+                {$payment_name}
+            </span>
+            {if !empty($payment_price.formated)}
+                <small class="price">
+                    &nbsp;{$payment_price.formated}
+                </small>
+            {/if}
+        </label>
+    </header>
+    <div class="desc collapse {if !empty($payment_selected) && $payment_code == $payment_selected} in{/if} payment-desc">
+        {if !empty($payment_desc)}
+            <p>
+                {$payment_desc}
+            </p>
+        {/if}
+
+        {if $test_mode == 'true'}
+            <p style="color:red">
+                {txt key=XT_NOVALNET_TEST_MODE_NOTIFICATION_TEXT}
+            </p>
+        {/if}
+
+        {if !empty($user_info)}
+            <p>
+                {$user_info}
+            </p>
+        {/if}
+    </div>
+</div>
+
+

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf8"?>
+<xtcommerceplugin>
+    <title>Novalnet Global Configuration (Novalnet Haupteinstellungen)</title>
+    <version>11.6.0</version>
+    <code>xt_novalnet_config</code>
+    <url>https://www.novalnet.de</url>
+    <description>Novalnet Global Configuration (Novalnet Haupteinstellungen)</description>
+    <developer>Novalnet</developer>
+    <icon>novalnet.png</icon>
+    <type>extension</type>
+    <db_install><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/db_install.php');]]></db_install>
+    <db_uninstall><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/db_uninstall.php');]]></db_uninstall>
+    <minimumupdateversion>10.0.0</minimumupdateversion>
+    <db_update>
+       <update>
+            <version>10.0.0</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/db_update.php');]]></code>
+       </update>
+       <update>
+            <version>10.1.0</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/db_update.php');]]></code>
+       </update>
+       <update>
+            <version>11.5.0</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/db_update_11_6.php');]]></code>
+       </update>
+       <update>
+            <version>11.1.1</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[ //]]></code>
+       </update>
+       <update>
+            <version>11.1.2</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[ //]]></code>
+       </update>
+       <update>
+            <version>11.1.3</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[ //]]></code>
+       </update>
+       <update>
+            <version>11.1.4</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[ //]]></code>
+       </update>
+       <update>
+            <version>11.1.5</version>
+            <to_version>11.6.0</to_version>
+            <code><![CDATA[ //]]></code>
+       </update>
+    </db_update>
+    <plugin_code>
+        <code>
+            <hook>admin_dropdown.php:dropdown</hook>
+            <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_admin_dropdown.php');]]></phpcode>
+            <order>0</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>index_footer_tpl</hook>
+            <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_handle_affiliate.php');include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_index_footer_tpl.php');]]></phpcode>
+            <order>1</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_first</hook>
+            <phpcode><![CDATA[include _SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/module_checkout_php_checkout_first.php';]]></phpcode>
+            <order>1</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>order_edit.php:display_data</hook>
+            <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_show_extension.php');]]></phpcode>
+            <order>2</order>
+            <active>1</active>
+        </code>
+        <code>
+            <hook>module_checkout.php:checkout_payment_check</hook>
+            <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_payment_check.php');]]></phpcode>
+            <order>3</order>
+            <active>1</active>
+        </code>
+      <code>
+       <hook>class.orders.php:_sendOrderMail_bottom</hook>
+        <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_send_transaction_comments.php');]]></phpcode>
+        <order>4</order>
+        <active>1</active>
+     </code>
+    <code>
+        <hook>class.plugin_installed.php:_set_bottom</hook>
+        <phpcode><![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_admin_post_validation.php';]]></phpcode>
+        <order>5</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>class.payment.php:_set_top</hook>
+        <phpcode><![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_admin_pre_validation.php';]]></phpcode>
+        <order>4</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>class.plugin_installed.php:_getParams_bottom</hook>
+        <phpcode><![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_update_backend_details.php';]]></phpcode>
+        <order>6</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>xt_orders_invoices:issue_save_invoice</hook>
+        <phpcode><![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_invoice_transaction_comments.php';]]></phpcode>
+        <order>7</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>class.plugin.php:setPluginConfigTop</hook>
+        <phpcode><![CDATA[include_once _SRV_WEBROOT.'plugins/xt_novalnet_config/hooks/novalnet_update_global_configuration.php';]]></phpcode>
+        <order>8</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>module_checkout.php:checkout_selections</hook>
+        <phpcode><![CDATA[include_once(_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_checkout_selection.php');]]></phpcode>
+        <order>9</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>container_bottom</hook>
+        <phpcode><![CDATA[include_once (_SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_redirect.php');]]></phpcode>
+        <order>10</order>
+        <active>1</active>
+    </code>
+    <code>
+        <hook>module_checkout.php:payment_proccess_bottom</hook>
+        <phpcode><![CDATA[include _SRV_WEBROOT._SRV_WEB_PLUGINS.'xt_novalnet_config/hooks/novalnet_payment_proccess_bottom.php';]]></phpcode>
+        <order>11</order>
+        <active>1</active>
+    </code>
+    </plugin_code>
+    <configuration>
+        <config>
+            <key>XT_NOVALNET_ACTIVATION_KEY</key>
+            <type>textfield</type>
+            <value></value>
+            <order>1</order>
+            <de>
+                <title>Aktivierungsschlüssel des Produkts</title>
+                <description>Novalnet-Aktivierungsschlüssel für das Produkt eingeben. Um diesen Aktivierungschlüssel für das Produkt zu erhalten, gehen Sie zum Novalnet-Admin-Portal - Projekte: Informationen zum jeweiligen Projekt - Parameter Ihres Shops: API Signature (Aktivierungsschlüssel des Produkts)</description>
+            </de>
+            <en>
+                <title>Product activation key</title>
+                <description>Enter Novalnet Product activation key. To get the Product Activation Key, go to Novalnet admin portal - PROJECTS: Project Information - Shop Parameters: API Signature (Product activation key)</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_VENDOR_ID</key>
+            <type>hidden</type>
+            <value></value>
+            <order>2</order>
+            <de>
+                <title>Händler-ID</title>
+            </de>
+            <en>
+                <title>Merchant ID</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_AUTH_CODE</key>
+            <type>hidden</type>
+            <value></value>
+            <order>3</order>
+            <de>
+                <title>Authentifizierungscode</title>
+            </de>
+            <en>
+                <title>Authentication code</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_PRODUCT_ID</key>
+            <type>hidden</type>
+            <value></value>
+            <order>4</order>
+            <de>
+                <title>Projekt-ID</title>
+            </de>
+            <en>
+                <title>Project ID</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_PAYMENT_CLIENT_KEY</key>
+            <type>textfield</type>
+            <value></value>
+            <order>5</order>
+            <de>
+                <title>Schlüsselkunde</title>
+            </de>
+            <en>
+                <title>Client Key</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_TARIFF_ID</key>
+            <type>textfield</type>
+            <order>6</order>
+            <de>
+                <title>Auswahl der Tarif-ID</title>
+                <description>Novalnet-Tarif-ID auswählen.</description>
+            </de>
+            <en>
+                <title>Select Tariff ID</title>
+                <description>Select Novalnet tariff ID</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_PAYMENT_ACCESS_KEY</key>
+            <type>hidden</type>
+            <value></value>
+            <order>7</order>
+            <de>
+                <title>Zahlungs-Zugriffsschlüssel</title>
+            </de>
+            <en>
+                <title>Payment access key</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_SELECT_DEFAULT_PAYMENT</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>8</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Default-Zahlungsart aktivieren</title>
+                <description>Für registrierte Benutzer wird die letzte ausgewählte Zahlungsart als Standardeinstellung beim Checkout ausgewählt.</description>
+            </de>
+            <en>
+                <title>Enable default payment method</title>
+                <description>For the registered users the last chosen payment method will be selected by default during the checkout</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_PAYMENT_LOGO_ENABLE</key>
+            <value>true</value>
+            <type>dropdown</type>
+            <order>11</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Zahlungslogo anzeigen</title>
+                <description>Das Logo der Zahlungsart wird auf der Checkout-Seite angezeigt.</description>
+            </de>
+            <en>
+                <title>Display payment logo</title>
+                <description>The payment method logo will be displayed on the checkout page</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_ONHOLD_COMPLETE_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>12</order>
+            <value>16</value>
+            <de>
+                <title>On-hold-Bestellstatus</title>
+            </de>
+            <en>
+                <title>Onhold order status</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_ONHOLD_CANCEL_STATUS</key>
+            <type>dropdown</type>
+            <url>status:order_status</url>
+            <order>13</order>
+            <value>34</value>
+            <de>
+                <title>Status für stornierte Bestellungen</title>
+            </de>
+            <en>
+                <title>Cancelled order status</title>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_CALLBACK_TESTMODE</key>
+            <value>false</value>
+            <type>dropdown</type>
+            <order>14</order>
+            <url>conf_truefalse</url>
+            <de>
+                <title>Manuelles Testen der Benachrichtigungs- / Webhook-URL erlauben</title>
+                <description>Diese Option ermöglicht eine manuelle Ausführung. Bitte deaktivieren Sie diese Option, bevor Sie Ihren Shop in den LIVE-Modus schalten, um nicht autorisierte Zugriffe von externen Parteien (außer von Novalnet) zu vermeiden.</description>
+            </de>
+            <en>
+                <title>Allow manual testing of the Notification / Webhook URL</title>
+                <description>This option will allow performing a manual execution. Please disable this option before setting your shop to LIVE mode, to avoid unauthorized calls from external parties (excl. Novalnet).</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_CALLBACK_URL</key>
+            <value></value>
+            <type>textfield</type>
+            <order>15</order>
+            <de>
+                <title>Benachrichtigungs- / Webhook-URL</title>
+            </de>
+            <en>
+                <title>Notification / Webhook URL</title>
+            </en>
+        </config>
+         <config>
+            <key>XT_NOVALNET_CALLBACK_MAIL_TO</key>
+            <type>textfield</type>
+            <value></value>
+            <order>16</order>
+            <de>
+                <title>E-Mails senden an</title>
+                <description>Emailadresse des Empfängers</description>
+            </de>
+            <en>
+                <title>Send e-mail to</title>
+                <description>E-Mail address of the recipient</description>
+            </en>
+        </config>
+        <config>
+            <key>XT_NOVALNET_TARIFF_ID_STORE</key>
+            <value></value>
+            <type>hidden</type>
+            <order>18</order>
+            <de>
+                <title></title>
+                <description></description>
+            </de>
+            <en>
+                <title></title>
+                <description></description>
+            </en>
+        </config>
+    </configuration>
+</xtcommerceplugin>

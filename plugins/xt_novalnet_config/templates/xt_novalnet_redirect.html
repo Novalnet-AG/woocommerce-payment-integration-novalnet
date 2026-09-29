@@ -1,0 +1,74 @@
+<h1>{txt key=TEXT_PAGE_TITLE_PAY}</h1>
+<p>{txt key=TEXT_PAY_FORMULAR}</p>
+<form name="pay" action="{$redirect_url}" method="post" id="checkout-pay" onsubmit="disableSubmitButton()">
+
+    {foreach from=$param key=k item=v}
+    <input type="hidden" name="{$k}" value="{$v}" />
+    {/foreach}
+
+    <div class="clearfix">
+        <a href="javascript:history.back();" class="btn btn-default pull-left">
+            <i class="fa fa-chevron-left"></i>
+            {txt key=BUTTON_BACK}
+        </a>
+        <button id="pay-submit" type="submit" class="btn btn-success pull-right">
+            <span class="glyphicon glyphicon-ok"></span>
+            {txt key=BUTTON_START_PAYMENT}
+        </button>
+    </div>
+
+    {hook key=checkout_tpl_pay}
+</form>
+
+<script>
+    function loadJQueryAndExecute(callback) {
+    if (typeof jQuery !== 'undefined') {
+        // If jQuery is already defined
+        $(document).ready(callback);
+    } else {
+       // Create a script element
+        const script = document.createElement('script');
+        script.src = 'https://code.jquery.com/jquery-1.12.4.js'; // Link to the jQuery CDN
+        script.type = 'text/javascript';
+        script.onload = function () {
+            $(document).ready(callback); // Run the callback once jQuery is loaded and the DOM is ready
+        };
+        script.onerror = function () {
+            console.error('Failed to load jQuery.');
+        };    // Append the script to the head or body to load it
+        document.head.appendChild(script);
+    }
+}
+
+loadJQueryAndExecute(function () {
+if ( window.addEventListener ) {
+window.addEventListener('keydown', function (e) {
+onKeyDownEvt(e);
+}, false);
+} else if( window.attachEvent ) {
+window.attachEvent('onkeydown', function (e) {
+onKeyDownEvt(e);
+});
+}else if ( document.attachEvent ) {
+document.attachEvent('onkeydown', function (e) {
+onKeyDownEvt(e);
+});
+}else{
+document.addEventListener('keydown', function (e) {
+onKeyDownEvt(e);
+}, false);
+}
+
+function onKeyDownEvt(evt)
+{
+evt.preventDefault();
+}
+});
+function disableSubmitButton() {
+    jQuery("#pay-submit").attr('disabled', true);
+}
+
+</script>
+
+
+
